@@ -1,5 +1,5 @@
 import React from "react";
-// import { ImBriefcase } from "react-icons/im";
+import { BsLink45Deg } from "react-icons/bs";
 // import { IoLogoGithub } from "react-icons/io5";
 // import { TbExternalLink } from "react-icons/tb";
 import realtor from "../assets/re.jpg";
@@ -8,12 +8,13 @@ import biz from "../assets/biz.jpg";
 import p1 from "../assets/p1.jpg";
 
 const Portfolio = () => {
+  // ZiltChat is  chatting website, where you can connect with people from all over the world! Our site provides a safe and friendly environment for you to chat with others, whether you're looking for new friends, a casual conversation, or a meaningful connection.You can create your own profile, upload photos, and start chatting instantly with our private messaging system.
   const portfolio = [
     {
       id: 1,
       name: "Chat App",
       img: chat,
-      desc: "ZiltChat is  chatting website, where you can connect with people from all over the world! Our site provides a safe and friendly environment for you to chat with others, whether you're looking for new friends, a casual conversation, or a meaningful connection.You can create your own profile, upload photos, and start chatting instantly with our private messaging system. ",
+      desc: "ZiltChat is  chatting app,  friendly environment for you to chat with others, whether you're looking for new friends, a casual conversation, or a meaningful connection.You can create your own profile, upload photos, and start chatting instantly with our private messaging system. ",
       stack: ["Javascript", "React Js ", "Tailwind CSS", "Google Firebase"],
       github: "https://github.com/mr-atuzie/chatting_app",
       link: "https://main--golden-boba-1b00ba.netlify.app/",
@@ -22,7 +23,7 @@ const Portfolio = () => {
       id: 2,
       name: "E-commerce App",
       img: "",
-      desc: "E-commerce website,an online platform where businesses can sell their products and services to customers through the internet. The website include a shopping cart feature ,a secure payment gateway that allows customers to make payments",
+      desc: "E-commerce app,an online platform where businesses can sell their products and services to customers through the internet. The website include a shopping cart feature ,a secure payment gateway that allows customers to make payments",
       stack: ["Javascript", "React Js ", "Tailwind CSS", "Redux"],
       github: "https://github.com/mr-atuzie/e-commerce",
       link: "https://scintillating-gumdrop-389a23.netlify.app/",
@@ -68,9 +69,12 @@ const Portfolio = () => {
     <div name="portfolio" className=" py-10 w-full">
       <div className="  w-[85%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4 ">
-          <div className=" font-semibold text-2xl">PORTFOLIO</div>
+          <div>
+            <div className=" font-semibold text-2xl">PORTFOLIO</div>
+            <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
+          </div>
 
-          <p className="  text-gray-500">
+          <p className=" mt-2  text-gray-500">
             These are some of the projects I've been working on lately
           </p>
         </div>
@@ -96,7 +100,7 @@ const Portfolio = () => {
 
 const PortfolioCard = ({ img, name, desc, github, link }) => {
   return (
-    <div className="border border-gray-300  group  duration-200">
+    <div className="border rounded-lg border-gray-300 h-fit  group  duration-200">
       <div className=" w-full relative">
         <img
           src={
@@ -134,16 +138,26 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
             })}
           </div> */}
 
-          <p className="text-gray-500 mt-2 ">{desc.substring(0, 150)}</p>
+          <p className="text-gray-500 mt-2 ">{desc}</p>
 
-          <div>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              {" "}
-              demo
+          <div className=" flex gap-5 mt-4">
+            <a
+              className=" text-blue-700 flex items-center underline capitalize"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLink45Deg />
+              Demo
             </a>
-            <a href={github} target="_blank" rel="noopener noreferrer">
-              {" "}
-              code
+            <a
+              className=" text-blue-700 flex items-center underline capitalize"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLink45Deg />
+              github
             </a>
           </div>
         </div>
