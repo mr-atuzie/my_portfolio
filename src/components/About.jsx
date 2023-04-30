@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 const About = () => {
-  const [more, setMore] = useState(false);
+  // const [more, setMore] = useState(false);
 
   return (
     <div name="about" className=" w-full   ">

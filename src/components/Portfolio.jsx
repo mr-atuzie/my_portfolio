@@ -16,7 +16,7 @@ const Portfolio = () => {
       desc: "ZiltChat is  chatting website, where you can connect with people from all over the world! Our site provides a safe and friendly environment for you to chat with others, whether you're looking for new friends, a casual conversation, or a meaningful connection.You can create your own profile, upload photos, and start chatting instantly with our private messaging system. ",
       stack: ["Javascript", "React Js ", "Tailwind CSS", "Google Firebase"],
       github: "https://github.com/mr-atuzie/chatting_app",
-      link: "",
+      link: "https://main--golden-boba-1b00ba.netlify.app/",
     },
     {
       id: 2,
