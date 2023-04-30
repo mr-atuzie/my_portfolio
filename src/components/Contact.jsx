@@ -1,5 +1,5 @@
 import React from "react";
-import { IoMdPaperPlane } from "react-icons/io";
+// import { IoMdPaperPlane } from "react-icons/io";
 
 const Contact = () => {
   return (
