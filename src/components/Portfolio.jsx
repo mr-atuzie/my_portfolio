@@ -76,7 +76,7 @@ const Portfolio = () => {
         </div>
 
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolio.map(({ id, img, name, desc, github }) => {
+          {portfolio.map(({ id, img, name, desc, github, link }) => {
             return (
               <PortfolioCard
                 key={id}
@@ -84,6 +84,7 @@ const Portfolio = () => {
                 name={name}
                 github={github}
                 desc={desc}
+                link={link}
               />
             );
           })}
@@ -93,7 +94,7 @@ const Portfolio = () => {
   );
 };
 
-const PortfolioCard = ({ img, name, desc, github }) => {
+const PortfolioCard = ({ img, name, desc, github, link }) => {
   return (
     <div className="border border-gray-300  group  duration-200">
       <div className=" w-full relative">
@@ -136,13 +137,13 @@ const PortfolioCard = ({ img, name, desc, github }) => {
           <p className="text-gray-500 mt-2 ">{desc.substring(0, 150)}</p>
 
           <div>
-            <a href={github} target="_blank" rel="noopener noreferrer">
+            <a href={link} target="_blank" rel="noopener noreferrer">
               {" "}
-              code
+              demo
             </a>
             <a href={github} target="_blank" rel="noopener noreferrer">
               {" "}
-              demo
+              code
             </a>
           </div>
         </div>
