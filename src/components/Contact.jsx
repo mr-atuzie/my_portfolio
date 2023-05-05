@@ -16,7 +16,7 @@ const Contact = () => {
             email 😊
           </p>
 
-          <div className=" flex flex-col lg:flex-row items-center gap-4 lg:gap-0 lg:items-center mt-6 justify-start lg:justify-between">
+          <div className=" flex flex-col lg:flex-row items-start gap-6 lg:gap-0 lg:items-center mt-6 justify-start lg:justify-between">
             <div>
               <h2 className=" text-gray-600">Email:</h2>
               <p className=" text-lg text-blue-600">rexatuzie@gmail.com</p>

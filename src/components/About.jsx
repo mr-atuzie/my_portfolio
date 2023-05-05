@@ -68,7 +68,7 @@ const About = () => {
             {certificate.map((cert, index) => {
               return (
                 <a
-                  className=" text-blue-700 flex items-center underline capitalize"
+                  className="  flex items-center  capitalize"
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
