@@ -17,14 +17,14 @@ const About = () => {
   return (
     <div name="about" className=" w-full   ">
       <div className=" w-[90%] lg:w-[70%] mx-auto h-full  ">
-        <div className=" mb-4">
+        <div className=" my-4">
           <div className=" font-semibold text-2xl">ABOUT ME</div>
           <div className="w-[70px] rounded-lg h-[4px] bg-red-600"></div>
         </div>
         <p className=" text-gray-600 leading-7">
-          Hello, I'm Rex, a frontend developer with 1 years of experience in the
-          industry. I have a passion for creating engaging and functional web
-          experiences and enjoy bringing ideas to life in the browser.
+          I'm a frontend developer with 2 years of experience in the industry. I
+          have a passion for creating engaging and functional web experiences
+          and enjoy bringing ideas to life in the browser.
         </p>
 
         <p className=" text-gray-600 my-7 leading-7">
