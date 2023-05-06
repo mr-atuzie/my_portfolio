@@ -66,8 +66,10 @@ const About = () => {
 
         <div className=" mt-6">
           <div className="mb-6">
-            <div className=" font-bold  uppercase text-xl">Certifications</div>
-            <div className="w-[50px] rounded-lg h-[4px] bg-purple-600"></div>
+            <div className=" font-semibold  uppercase text-2xl">
+              Certifications
+            </div>
+            <div className="w-[100px] rounded-lg h-[4px] bg-purple-600"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
