@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <div name="about" className=" w-full   ">
-      <div className=" w-[85%] lg:w-[70%] mx-auto h-full  ">
+      <div className=" w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4">
           <div className=" font-semibold text-2xl">ABOUT ME</div>
           <div className="w-[70px] rounded-lg h-[4px] bg-red-600"></div>
@@ -37,9 +37,15 @@ const About = () => {
           frontend frameworks like{" "}
           <span className=" text-blue-600"> Tailwind CSS </span> ,{" "}
           <span className=" text-blue-600"> Redux</span> as well as{" "}
+          <span className=" text-blue-600"> Git - Version control </span>,
           <span className=" text-blue-600">
             {" "}
             Integration of third party API's{" "}
+          </span>
+          ,
+          <span className=" text-blue-600">
+            {" "}
+            Ensure cross browser and cross-platform compatibility
           </span>
           , <span className=" text-blue-600"> CI/CD </span>. I also have
           experience working with{" "}
