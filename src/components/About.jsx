@@ -70,7 +70,7 @@ const About = () => {
             <div className="w-[50px] rounded-lg h-[4px] bg-purple-600"></div>
           </div>
 
-          <div className=" flex flex-wrap gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {certificate.map((cert, index) => {
               return (
                 <a
