@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
+import resume from "../assets/rex cv.pdf";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const links = [
     { id: 1, link: "home" },
+    { id: 3, link: "About" },
+    { id: 4, link: "Certifications" },
     { id: 2, link: "portfolio" },
-    { id: 3, link: "services" },
-    { id: 4, link: "testimonails" },
-    { id: 5, link: "Contact us" },
+    { id: 5, link: "Contact Me" },
   ];
 
   return (
@@ -34,9 +35,13 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden md:flex">
-        <button className=" bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black ">
-          Resume
-        </button>
+        <a
+          className="  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+          href={resume}
+          download
+        >
+          Download CV
+        </a>
       </div>
 
       <div
@@ -51,6 +56,7 @@ const Navbar = () => {
           {links.map(({ id, link }) => {
             return (
               <li
+                onClick={() => setNav(false)}
                 key={id}
                 className=" px-4 cursor-pointer capitalize py-4 text-xl  hover:scale-105 duration-200"
               >

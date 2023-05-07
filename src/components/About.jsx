@@ -1,5 +1,5 @@
 import React from "react";
-
+import resume from "../assets/rex cv.pdf";
 const About = () => {
   // const [more, setMore] = useState(false);
 
@@ -7,10 +7,12 @@ const About = () => {
     {
       img: "https://udemy-certificate.s3.amazonaws.com/image/UC-25731b3f-cd56-40f0-b9d9-7c7c838a77f9.jpg",
       link: "https://www.udemy.com/certificate/UC-25731b3f-cd56-40f0-b9d9-7c7c838a77f9/",
+      desc: " React from the ground up to make dynamic websites (includes Context, Hooks, Reducers, Routing, Auth, Databases) ,",
     },
     {
       img: "https://udemy-certificate.s3.amazonaws.com/image/UC-2da733da-5a9d-4ba6-a047-463e059af816.jpg",
       link: "https://www.udemy.com/certificate/UC-2da733da-5a9d-4ba6-a047-463e059af816/",
+      desc: "Firebase, How to perform CRUD Operations ,How to Handle Authentication using Email and Password, using Google Account,How to store files in Firebase Storage, How to listen to real-time database updates,How to listen to real-time auth changes , How to handle errors and success messages. and How to deploy an application to Firebase",
     },
   ];
 
@@ -64,7 +66,17 @@ const About = () => {
           developer.
         </p>
 
-        <div className=" mt-6">
+        <div className=" mt-8">
+          <a
+            className="  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+            href={resume}
+            download
+          >
+            Download CV
+          </a>
+        </div>
+
+        <div className=" mt-20">
           <div className="mb-6">
             <div className=" font-semibold  uppercase text-2xl">
               Certifications
@@ -80,14 +92,20 @@ const About = () => {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  key={index}
                 >
-                  <div className="flex gap-2" key={index}>
-                    <p>{index + 1}.</p>
+                  <div className="">
                     <img
                       className=" w-[600px] border-2 shadow-md object-contain"
                       src={cert.img}
                       alt=""
                     />
+                    {/* <p className=" w-[600px] text-sm text-gray-500 mt-2 ">
+                      <span className="">
+                        {" "}
+                        {index + 1}. {cert.desc}
+                      </span>
+                    </p> */}
                   </div>
                 </a>
               );
