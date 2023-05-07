@@ -139,7 +139,7 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
             })}
           </div> */}
 
-            <p className="text-gray-500 mt-2 ">{desc}</p>
+            <p className="text-gray-500 text-sm lg:text-base mt-2 ">{desc}</p>
 
             <div className=" flex gap-5 mt-4">
               <a
