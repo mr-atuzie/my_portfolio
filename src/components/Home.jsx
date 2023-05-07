@@ -21,11 +21,11 @@ const Home = () => {
       <h1 className="  text-3xl font-extrabold lg:text-6xl">
         FRONTEND DEVELOPER
       </h1>
-      <div className="  text-center text-gray-400  my-2  font-medium text-sm">
+      <div className="  text-center text-gray-400  my-2  font-medium text-xs">
         JavaScript | React Js | Tailwind CSS | Redux | Firebase
       </div>
 
-      <p className=" leading-7 text-gray-600 px-4 lg:max-w-2xl ">
+      <p className=" leading-7 text-gray-600 px-4 lg:max-w-2xl  text-center">
         Hello and welcome to my portfolio👋 I am a passionate about creating
         beautiful and user-friendly web applications and also understanding the
         needs and goals of my clients and ensuring that the final product
