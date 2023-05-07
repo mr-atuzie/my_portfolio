@@ -67,7 +67,7 @@ const Portfolio = () => {
   ];
   return (
     <div name="portfolio" className=" py-10 w-full">
-      <div className="  w-[85%] lg:w-[70%] mx-auto h-full  ">
+      <div className="  w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4 ">
           <div>
             <div className=" font-semibold text-2xl">PORTFOLIO</div>
