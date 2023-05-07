@@ -22,7 +22,14 @@ const Contact = () => {
               <p className=" text-lg text-blue-600">rexatuzie@gmail.com</p>
             </div>
 
-            <div className=" text-lg text-blue-600">Twitter</div>
+            <a
+              className=" "
+              href=" https://twitter.com/IkwerreG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className=" text-lg text-blue-600">Twitter</div>
+            </a>
 
             <a
               className=" "
