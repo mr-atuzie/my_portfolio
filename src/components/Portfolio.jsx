@@ -125,7 +125,7 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
         </div> */}
         </div>
 
-        <div className={" p-4 "}>
+        <div className={" p-2 lg:p-4 "}>
           <div className=" my-3">
             <h3 className=" text-lg font-medium text-gray-700 capitalize">
               {name}
