@@ -24,7 +24,14 @@ const Contact = () => {
 
             <div className=" text-lg text-blue-600">Twitter</div>
 
-            <div className=" text-lg text-blue-600">LinkedIn</div>
+            <a
+              className=" "
+              href="https://www.linkedin.com/in/rex-atuzie-0ab678205/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className=" text-lg text-blue-600">LinkedIn</div>
+            </a>
           </div>
         </div>
       </div>
