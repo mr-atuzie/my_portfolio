@@ -143,7 +143,7 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
 
             <div className=" flex gap-5 mt-4">
               <a
-                className=" text-blue-700 flex items-center underline capitalize"
+                className=" text-sm lg:text-base text-blue-700 flex items-center underline capitalize"
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -152,7 +152,7 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
                 Use Demo
               </a>
               <a
-                className=" text-blue-700 flex items-center underline capitalize"
+                className=" text-sm lg:text-base text-blue-700 flex items-center underline capitalize"
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
