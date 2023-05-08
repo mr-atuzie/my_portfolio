@@ -29,15 +29,6 @@ const Portfolio = () => {
       link: "https://scintillating-gumdrop-389a23.netlify.app/",
     },
     {
-      id: 3,
-      name: "Exams App",
-      img: "",
-      desc: "A computer base test application for writing multiple exams , getting instanst results , grading user performance and also sending certification to user email",
-      stack: ["Javascript", "React Js ", "Tailwind CSS", "Redux"],
-      github: "https://github.com/mr-atuzie/cbt",
-      link: "https://endearing-otter-5dbb9f.netlify.app/",
-    },
-    {
       id: 4,
       name: "Listing/ Rent App",
       img: realtor,
@@ -55,6 +46,16 @@ const Portfolio = () => {
       github: "https://github.com/mr-atuzie/edge",
       link: "https://splendorous-smakager-d3f3b4.netlify.app/",
     },
+    {
+      id: 3,
+      name: "Exams App",
+      img: "",
+      desc: "A computer base test application for writing multiple exams , getting instanst results , grading user performance and also sending certification to user email",
+      stack: ["Javascript", "React Js ", "Tailwind CSS", "Redux"],
+      github: "https://github.com/mr-atuzie/cbt",
+      link: "https://endearing-otter-5dbb9f.netlify.app/",
+    },
+
     {
       id: 6,
       name: "Business Portfolio (landing page)",
