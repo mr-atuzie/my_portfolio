@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import heroImg from "../assets/me.jpg";
 
 const Home = () => {
@@ -11,25 +12,28 @@ const Home = () => {
       name="home"
       className=" flex items-center justify-center flex-col h-[80vh] w-full"
     >
-      <img
+      <motion.img
         src={heroImg}
-        className="w-[300px] h-[300px] rounded-full object-cover"
-        alt=""
+        className="w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] rounded-full object-cover"
+        alt="porfolioImg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1.5 }}
       />
 
       <div className=" font-medium text-lg capitalize">Hi I'm rex atuzie</div>
       <h1 className="  text-3xl font-extrabold lg:text-6xl">
         FRONTEND DEVELOPER
       </h1>
-      <div className="  text-center text-gray-400  my-2  font-medium text-xs">
-        JavaScript | React Js | Tailwind CSS | Redux | Firebase
+      <div className="  text-center text-gray-400  my-2  font-medium text-xs lg:text-sm">
+        JavaScript | React Js | Tailwind CSS | Typescrpit | Firebase
       </div>
 
       <p className=" leading-7 text-gray-600 px-4 lg:max-w-2xl  text-center">
-        Hello and welcome to my portfolio👋 I am a passionate about creating
-        beautiful and user-friendly web applications and also understanding the
-        needs and goals of my clients and ensuring that the final product
-        exceeds expectations.
+        Hello 👋 and welcome to my portfolio I am a passionate about coding and
+        i love focusing on the functionalities of web applications and i'm also
+        keen on understanding the needs and goals of my clients and ensuring
+        that the final product exceeds expectations.
       </p>
     </div>
   );

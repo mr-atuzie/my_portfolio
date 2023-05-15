@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 import resume from "../assets/rex cv.pdf";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -14,7 +15,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" flex justify-between items-center w-full h-20  px-4   bg-white">
+    <motion.nav
+      className=" flex justify-between items-center w-full h-20  px-4   bg-white"
+      initial={{ y: -200 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.3, type: "tween" }}
+    >
       <div>
         <h1 className=" z-10 text-3xl lg:text-5xl font-semibold  ml-2">
           Rex atuzie
@@ -36,11 +42,11 @@ const Navbar = () => {
 
       <div className="hidden md:flex">
         <a
-          className="  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+          className=" rounded-full  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
           href={resume}
           download
         >
-          Download CV
+          Download Resume
         </a>
       </div>
 
@@ -66,7 +72,7 @@ const Navbar = () => {
           })}
         </ul>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 
