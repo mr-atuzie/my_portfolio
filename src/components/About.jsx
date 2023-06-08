@@ -18,13 +18,13 @@ const About = () => {
           <div className=" font-semibold text-2xl">ABOUT ME</div>
           <div className="w-[70px] rounded-lg h-[4px] bg-red-600"></div>
         </div>
-        <p className=" text-gray-600 leading-7">
-          I'm a frontend developer with a year of experience in the industry. I
-          have a passion for creating engaging and functional web experiences
-          and enjoy bringing ideas to life in the browser.
+        <p className=" text-gray-600 leading-7 text-sm">
+          I'm a frontend developer with almost a year of experience in the
+          industry. i ac I have a passion for creating engaging and functional
+          web experiences and enjoy bringing ideas to life in the browser.
         </p>
 
-        <p className=" text-gray-600 my-7 leading-7">
+        <p className=" text-gray-600 my-7 text-sm leading-7">
           My technical skill set includes proficiency in{" "}
           <span className=" text-blue-600">HTML</span> ,{" "}
           <span className=" text-blue-600">CSS</span> and
@@ -44,17 +44,16 @@ const About = () => {
           </span>
           ,
           <span className=" text-blue-600">
-            {" "}
-            Ensure cross browser and cross-platform compatibility
+            Ensure cross browser and cross-platform compatibility{" "}
           </span>
-          and building <span className=" text-blue-600">Responsive </span> web
-          applications to fit any screen size. Im also have experience working
-          with <span className=" text-blue-600"> Google Firebase </span> for
-          backend cloud computing services It hosts databases, authentication
-          e.t.c,
+          and building{" "}
+          <span className=" text-blue-600">Responsive web applications</span> to
+          fit any screen size. Im also have experience working with{" "}
+          <span className=" text-blue-600"> Google Firebase </span> for backend
+          cloud computing services It hosts databases, authentication e.t.c,
         </p>
 
-        <p className=" text-gray-600 leading-7">
+        <p className=" text-sm text-gray-600 leading-7">
           In addition to my technical expertise,I'm committed to staying
           up-to-date with the latest industry trends and technologies, and I'm
           always looking for new ways to improve my skills. I have experience

@@ -101,9 +101,9 @@ const Portfolio = () => {
 
 const PortfolioCard = ({ img, name, desc, github, link }) => {
   return (
-    <a className=" " href={link} target="_blank" rel="noopener noreferrer">
-      <div className="border rounded-lg border-gray-300   group  duration-200">
-        <div className=" w-full relative">
+    <div className="border rounded-lg border-gray-300   group  duration-200">
+      <div className=" w-full relative">
+        <a className=" " href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={
               img === ""
@@ -113,8 +113,8 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
             className=" w-full h-[300px] object-cover object-top"
             alt=""
           />
-
-          {/* <div className="hidden group-hover:flex w-full h-full bg-black opacity-20   z-10  absolute top-0 bottom-0 duration-200"></div>
+        </a>
+        {/* <div className="hidden group-hover:flex w-full h-full bg-black opacity-20   z-10  absolute top-0 bottom-0 duration-200"></div>
 
         <div className="hidden group-hover:flex  w-full h-full   z-20 absolute top-0 bottom-0  justify-center items-center duration-200">
           <div className=" w-10 h-10 rounded-full flex items-center text-gray-900 justify-center   bg-white mr-3">
@@ -124,15 +124,15 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
             <TbExternalLink size={30} />
           </div>
         </div> */}
-        </div>
+      </div>
 
-        <div className={" p-2 lg:p-4 "}>
-          <div className=" my-3">
-            <h3 className=" text-lg font-medium text-gray-700 capitalize">
-              {name}
-            </h3>
+      <div className={" p-2 lg:p-4 "}>
+        <div className=" my-3">
+          <h3 className=" text-lg font-medium text-gray-700 capitalize">
+            {name}
+          </h3>
 
-            {/* <div className=" flex gap-2 items-center my-1">
+          {/* <div className=" flex gap-2 items-center my-1">
             <h3 className=" font-medium capitalize">stack:</h3>
 
             {stack.map((s) => {
@@ -140,32 +140,31 @@ const PortfolioCard = ({ img, name, desc, github, link }) => {
             })}
           </div> */}
 
-            <p className="text-gray-500 text-sm lg:text-base mt-2 ">{desc}</p>
+          <p className="text-gray-500 text-sm lg:text-base mt-2 ">{desc}</p>
 
-            <div className=" flex gap-5 mt-4">
-              <a
-                className=" text-sm lg:text-base text-blue-700 flex items-center underline capitalize"
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <BsLink45Deg />
-                Use Demo
-              </a>
-              <a
-                className=" text-sm lg:text-base text-blue-700 flex items-center underline capitalize"
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <BsLink45Deg />
-                See Code
-              </a>
-            </div>
+          <div className=" flex gap-5 mt-4">
+            <a
+              className=" text-sm lg:text-base flex gap-2 items-center  rounded-full  bg-black text-white px-4 py-2 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLink45Deg />
+              Use Demo
+            </a>
+            <a
+              className=" text-sm lg:text-base flex gap-2 items-center  rounded-full  bg-black text-white px-4 py-2 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLink45Deg />
+              See Code
+            </a>
           </div>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

@@ -1,5 +1,10 @@
 import React from "react";
-// import { IoMdPaperPlane } from "react-icons/io";
+import {
+  BsGithub,
+  BsLinkedin,
+  BsTwitter,
+  BsFillEnvelopeFill,
+} from "react-icons/bs";
 
 const Contact = () => {
   return (
@@ -18,27 +23,51 @@ const Contact = () => {
 
           <div className=" flex flex-col lg:flex-row items-start gap-6 lg:gap-0 lg:items-center mt-6 justify-start lg:justify-between">
             <div>
-              <h2 className=" text-gray-600">Email:</h2>
-              <p className=" text-lg text-blue-600">rexatuzie@gmail.com</p>
+              <a
+                className=" flex items-center gap-1 "
+                href=" https://twitter.com/IkwerreG"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsFillEnvelopeFill size={20} />
+                <div className=" text-lg text-blue-600">Email</div>
+              </a>
             </div>
 
-            <a
-              className=" "
-              href=" https://twitter.com/IkwerreG"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className=" text-lg text-blue-600">Twitter</div>
-            </a>
+            <div>
+              <a
+                className=" flex items-center gap-1 "
+                href=" https://twitter.com/IkwerreG"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsTwitter size={20} />
+                <div className=" text-lg text-blue-600">Twitter</div>
+              </a>
+            </div>
 
-            <a
-              className=" "
-              href="https://www.linkedin.com/in/rex-atuzie-0ab678205/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className=" text-lg text-blue-600">LinkedIn</div>
-            </a>
+            <div>
+              <a
+                className=" flex items-center gap-1 "
+                href="https://www.linkedin.com/in/rex-atuzie-0ab678205/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsLinkedin size={20} />
+                <div className=" text-lg text-blue-600">LinkedIn</div>
+              </a>
+            </div>
+            <div>
+              <a
+                className=" flex items-center gap-1 "
+                href="https://www.linkedin.com/in/rex-atuzie-0ab678205/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsGithub size={20} />
+                <div className=" text-lg text-blue-600">Github</div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
