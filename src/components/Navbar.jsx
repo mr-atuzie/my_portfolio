@@ -22,7 +22,7 @@ const Navbar = () => {
       transition={{ delay: 0.3, type: "tween" }}
     >
       <div>
-        <h1 className=" z-10 text-3xl lg:text-5xl font-semibold  ml-2">
+        <h1 className="  text-3xl lg:text-5xl font-semibold  ml-2">
           Rex atuzie
         </h1>
       </div>
@@ -52,25 +52,47 @@ const Navbar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className=" cursor-pointer z-10 pr-4 md:hidden"
+        className=" cursor-pointer  pr-4 md:hidden"
       >
         {nav ? <IoCloseOutline size={30} /> : <HiOutlineBars3 size={30} />}
       </div>
 
       {nav && (
-        <ul className=" flex flex-col justify-center absolute items-center bg-gray-50 top-0 left-0 w-full h-screen">
-          {links.map(({ id, link }) => {
-            return (
-              <li
-                onClick={() => setNav(false)}
-                key={id}
-                className=" px-4 cursor-pointer capitalize py-4 text-xl  hover:scale-105 duration-200"
-              >
-                {link}
-              </li>
-            );
-          })}
-        </ul>
+        <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[52vh] h-screen">
+          <div className=" bg-white p-4 flex justify-between items-center">
+            <div>
+              <h1 className="  text-xl lg:text-5xl font-semibold ">
+                Rex atuzie
+              </h1>
+              <p className=" text-gray-500 font-medium text-xs">
+                Frontend Developer
+              </p>
+            </div>
+            <div
+              onClick={() => setNav(!nav)}
+              className=" cursor-pointer  p-4 md:hidden"
+            >
+              {nav ? (
+                <IoCloseOutline size={30} />
+              ) : (
+                <HiOutlineBars3 size={30} />
+              )}
+            </div>
+          </div>
+          <ul className=" mt-11 ">
+            {links.map(({ id, link }) => {
+              return (
+                <li
+                  onClick={() => setNav(false)}
+                  key={id}
+                  className=" px-4 cursor-pointer capitalize  mb-4  hover:scale-105 duration-200"
+                >
+                  {link}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       )}
     </motion.nav>
   );
