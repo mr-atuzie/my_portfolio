@@ -101,7 +101,10 @@ const Portfolio = () => {
 
 const PortfolioCard = ({ img, name, desc, github, link }) => {
   return (
-    <div className="border rounded-lg border-gray-300   group  duration-200">
+    <div
+      id="projects"
+      className="border rounded-lg border-gray-300   group  duration-200"
+    >
       <div className=" w-full relative">
         <a className=" " href={link} target="_blank" rel="noopener noreferrer">
           <img

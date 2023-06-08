@@ -15,7 +15,7 @@ const Cert = () => {
     },
   ];
   return (
-    <div className=" w-[90%] lg:w-[70%] mx-auto h-full  ">
+    <div id="Certifications" className=" w-[90%] lg:w-[70%] mx-auto h-full  ">
       {" "}
       <div className=" mt-20">
         <div className="mb-8">

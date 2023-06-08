@@ -3,6 +3,7 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 import resume from "../assets/rex cv.pdf";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -34,7 +35,16 @@ const Navbar = () => {
               key={id}
               className=" capitalize px-4 cursor-pointer font-medium  hover:scale-105 duration-200"
             >
-              {link}
+              <Link
+                activeClass="active"
+                to={link}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                {link}
+              </Link>
             </li>
           );
         })}
@@ -85,9 +95,18 @@ const Navbar = () => {
                 <li
                   onClick={() => setNav(false)}
                   key={id}
-                  className=" px-4 cursor-pointer capitalize  mb-4  hover:scale-105 duration-200"
+                  className=" px-4 cursor-pointer capitalize  mb-5  hover:scale-105 duration-200"
                 >
-                  {link}
+                  <Link
+                    activeClass="active"
+                    to={link}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    {link}
+                  </Link>
                 </li>
               );
             })}

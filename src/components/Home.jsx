@@ -9,6 +9,7 @@ const Home = () => {
   // ✅ Proficient in using tools like Git & Github and also version control. and also.
   return (
     <div
+      id="home"
       name="home"
       className=" flex items-center justify-center flex-col lg:h-[80vh] w-full"
     >

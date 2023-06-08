@@ -7,6 +7,7 @@ const About = () => {
 
   return (
     <motion.div
+      id="About"
       name="about"
       className=" w-full   "
       initial={{ x: "-100vw" }}
