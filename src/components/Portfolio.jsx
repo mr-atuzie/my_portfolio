@@ -3,7 +3,7 @@ import { BsLink45Deg } from "react-icons/bs";
 // import { IoLogoGithub } from "react-icons/io5";
 // import { TbExternalLink } from "react-icons/tb";
 import realtor from "../assets/re.jpg";
-import chat from "../assets/chat.jpg";
+// import chat from "../assets/chat.jpg";
 import biz from "../assets/biz.jpg";
 import p1 from "../assets/p1.jpg";
 
