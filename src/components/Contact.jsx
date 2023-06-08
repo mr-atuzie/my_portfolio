@@ -60,7 +60,7 @@ const Contact = () => {
             <div>
               <a
                 className=" flex items-center gap-1 "
-                href="https://www.linkedin.com/in/rex-atuzie-0ab678205/"
+                href="https://github.com/mr-atuzie/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
