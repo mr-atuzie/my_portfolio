@@ -10,7 +10,7 @@ const Navbar = () => {
     { id: 1, link: "home" },
     { id: 3, link: "About" },
     { id: 4, link: "Certifications" },
-    { id: 2, link: "portfolio" },
+    { id: 2, link: "projects" },
     { id: 5, link: "Contact Me" },
   ];
 
