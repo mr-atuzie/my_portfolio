@@ -68,7 +68,7 @@ const Navbar = () => {
       </div>
 
       {nav && (
-        <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[72vw] h-screen">
+        <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[75vw] h-screen">
           <div className=" bg-white p-4 flex justify-between items-center">
             <div>
               <h1 className="  text-xl lg:text-5xl font-semibold ">
