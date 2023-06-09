@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../assets/rex cv.pdf";
+import resume from "../assets/ar.pdf";
 import { motion } from "framer-motion";
 
 const About = () => {

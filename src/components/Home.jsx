@@ -30,8 +30,8 @@ const Home = () => {
       </div>
       <p className=" w-[90%] mx-auto text-sm leading-7 text-gray-500 lg:px-4 lg:max-w-2xl lg:text-center ">
         Hello 👋 and welcome to my portfolio I am a Highly motivated and skilled
-        JavaScript Frontend Developer seeking an internship opportunity to apply
-        my knowledge and expertise in building modern and responsive web
+        JavaScript Frontend Developer seeking an opportunity to apply my
+        knowledge and expertise in building modern and responsive web
         applications. Committed to creating exceptional user experiences and
         collaborating with cross-functional teams to deliver high-quality
         software solutions.

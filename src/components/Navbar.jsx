@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
-import resume from "../assets/rex cv.pdf";
+import resume from "../assets/ar.pdf";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
@@ -111,6 +111,13 @@ const Navbar = () => {
               );
             })}
           </ul>
+          <a
+            className=" rounded-full  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+            href={resume}
+            download
+          >
+            Download Resume
+          </a>
         </div>
       )}
     </motion.nav>
