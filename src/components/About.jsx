@@ -21,9 +21,10 @@ const About = () => {
         </div>
         <p className=" text-gray-600 leading-7 text-sm">
           I'm a frontend developer with almost a year of experience in the
-          industry. with a Udemy certification in web development. I have a
-          passion for creating engaging and functional web experiences and enjoy
-          bringing ideas to life in the browser.
+          industry. with certification from Udemy in web development. I have a
+          deep love for coding and problem-solving, I thrive in the world of
+          technology and enjoy crafting innovative solutions to real-world
+          challenges.
         </p>
 
         <p className=" text-gray-600 my-7 text-sm leading-7">
@@ -56,14 +57,13 @@ const About = () => {
         </p>
 
         <p className=" text-sm text-gray-600 leading-7">
-          In addition to my technical expertise,I'm committed to staying
-          up-to-date with the latest industry trends and technologies, and I'm
-          always looking for new ways to improve my skills. I have experience
-          collaborating with designers, project managers, and other stakeholders
-          to ensure that projects are delivered on time and meet the needs of
-          clients and end-users. I'm a strong communicator and problem-solver,
-          and I'm always looking for opportunities to learn and grow as a
-          developer.
+          In addition to my technical expertise,I'm committed am a Highly
+          motivated and seeking an opportunity to apply my knowledge and
+          expertise in frontend development principles, best practices, and the
+          latest industry standards. I have experience collaborating with
+          designers, project managers, and other stakeholders to ensure that
+          projects are delivered on time and meet the needs of clients and
+          end-users.
         </p>
 
         <div className=" mt-8">
