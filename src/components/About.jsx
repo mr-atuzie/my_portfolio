@@ -19,15 +19,14 @@ const About = () => {
           <div className=" font-semibold text-2xl">ABOUT ME</div>
           <div className="w-[70px] rounded-lg h-[4px] bg-red-600"></div>
         </div>
-        <p className=" text-gray-600 leading-7 text-sm">
-          I'm a frontend developer with almost a year of experience in the
-          industry. with certification from Udemy in web development. I have a
-          deep love for coding and problem-solving, I thrive in the world of
-          technology and enjoy crafting innovative solutions to real-world
-          challenges.
+        <p className=" text-gray-600 leading-7 text-sm lg:text-base">
+          I'm a frontend developer with almost 2+ of experience in the industry.
+          with certification from Udemy in web development. I have a deep love
+          for coding and problem-solving, I thrive in the world of technology
+          and enjoy crafting innovative solutions to real-world challenges.
         </p>
 
-        <p className=" text-gray-600 my-7 text-sm leading-7">
+        <p className=" text-gray-600 my-7 text-sm lg:text-base leading-7">
           My technical skill set includes proficiency in{" "}
           <span className=" text-blue-600">HTML</span> ,{" "}
           <span className=" text-blue-600">CSS</span> and
@@ -56,9 +55,12 @@ const About = () => {
           cloud computing services It hosts databases, authentication e.t.c,
         </p>
 
-        <p className=" text-sm text-gray-600 leading-7">
-          In addition to my technical expertise,I'm committed am a Highly
-          motivated and seeking an opportunity to apply my knowledge and
+        <p className=" text-sm text-gray-600 leading-7 lg:text-base">
+          In addition to my technical expertise,I am also familar with server
+          side tools like <span className=" text-blue-600">Node Js</span>,
+          <span className=" text-blue-600">Express Js</span> and{" "}
+          <span className=" text-blue-600">Mongo DB</span>. I'm committed am a
+          Highly motivated and seeking an opportunity to apply my knowledge and
           expertise in frontend development principles, best practices, and the
           latest industry standards. I have experience collaborating with
           designers, project managers, and other stakeholders to ensure that
