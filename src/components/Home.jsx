@@ -30,11 +30,11 @@ const Home = () => {
       </div>
       <p className=" w-[90%] mx-auto text-sm leading-7 text-gray-500 lg:px-4 lg:max-w-2xl lg:text-center ">
         Hello 👋 and welcome to my portfolio I am a Highly motivated and skilled
-        JavaScript Frontend Developer seeking an opportunity to apply my
-        knowledge and expertise in building modern and responsive web
-        applications. Committed to creating exceptional user experiences and
-        collaborating with cross-functional teams to deliver high-quality
-        software solutions.
+        MERN Stack Developer seeking an opportunity to apply my knowledge and
+        expertise in building modern and responsive web applications.
+        {/* Committed
+        to creating exceptional user experiences and collaborating with
+        cross-functional teams to deliver high-quality software solutions. */}
       </p>
       {/* passionate about coding and i love focusing on the functionalities of web
       applications and i'm also keen on understanding the needs and goals of my

@@ -20,10 +20,13 @@ const About = () => {
           <div className="w-[70px] rounded-lg h-[4px] bg-red-600"></div>
         </div>
         <p className=" text-gray-600 leading-7 text-sm lg:text-base">
-          I'm a frontend developer with almost 2+ of experience in the industry.
-          with certification from Udemy in web development. I have a deep love
-          for coding and problem-solving, I thrive in the world of technology
-          and enjoy crafting innovative solutions to real-world challenges.
+          I'm a MERN Stack Developer with a proven track record of building
+          full-stack web applications using MongoDB, Express.js, React, and
+          Node.js. With 2 years of hands-on experience, I specialize in creating
+          scalable and responsive web solutions that provide exceptional user
+          experiences. Proficient in both frontend and backend development, I
+          excel at designing intuitive user interfaces, implementing robust
+          APIs, and optimizing application performance.
         </p>
 
         <p className=" text-gray-600 my-7 text-sm lg:text-base leading-7">
@@ -32,18 +35,20 @@ const About = () => {
           <span className=" text-blue-600">CSS</span> and
           <span className=" text-blue-600"> JavaScript.</span> I am particularly
           skilled in working with JavaScript frameworks such as{" "}
-          <span className=" text-blue-600"> React Js</span> , I'm also
-          experienced in using{" "}
-          <span className=" text-blue-600"> Typscript </span> and other popular
-          frontend libaries like{" "}
+          <span className=" text-blue-600"> React Js</span>
+          {/* , I'm also
+          experienced in using{" "} */}
+          {/* <span className=" text-blue-600"> Typscript </span> and other popular
+          frontend libaries like{" "} */}
           <span className=" text-blue-600"> Tailwind CSS </span> ,{" "}
-          <span className=" text-blue-600"> Redux</span> as well as{" "}
+          <span className=" text-blue-600"> Redux</span>
+          {/* as well as{" "}
           <span className=" text-blue-600"> Git</span> for version control . as
           while
           <span className=" text-blue-600">
             {" "}
             Integration of third party API's{" "}
-          </span>
+          </span> */}
           ,
           <span className=" text-blue-600">
             Ensure cross browser and cross-platform compatibility{" "}
@@ -51,21 +56,20 @@ const About = () => {
           and building{" "}
           <span className=" text-blue-600">Responsive web applications</span> to
           fit any screen size. Im also have experience working with{" "}
-          <span className=" text-blue-600"> Google Firebase </span> for backend
-          cloud computing services It hosts databases, authentication e.t.c,
+          {/* <span className=" text-blue-600"> Google Firebase </span>  */}
+          {/* for backend cloud computing services It hosts databases,
+          authentication e.t.c, */}
         </p>
 
         <p className=" text-sm text-gray-600 leading-7 lg:text-base">
-          In addition to my technical expertise,I am also familar with server
-          side tools like <span className=" text-blue-600">Node Js</span>,
-          <span className=" text-blue-600">Express Js</span> and{" "}
-          <span className=" text-blue-600">Mongo DB</span>. I'm committed am a
-          Highly motivated and seeking an opportunity to apply my knowledge and
-          expertise in frontend development principles, best practices, and the
-          latest industry standards. I have experience collaborating with
-          designers, project managers, and other stakeholders to ensure that
-          projects are delivered on time and meet the needs of clients and
-          end-users.
+          Foor backend Development,I am familar with server side tools like{" "}
+          <span className=" text-blue-600">Node Js</span>,
+          <span className=" text-blue-600">Express Js</span> for Building
+          RESTFUL API'S and <span className=" text-blue-600">Mongo DB</span>. My
+          passion for staying up-to-date with the latest technologies and best
+          practices ensures that I can contribute effectively to any dynamic
+          development team. Ready to leverage my expertise to drive innovation
+          and deliver high-quality software solutions.
         </p>
 
         <div className=" mt-8">
