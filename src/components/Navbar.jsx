@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
-import resume from "../assets/ar.pdf";
+import resume from "../assets/fs.pdf";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../assets/ar.pdf";
+import resume from "../assets/fs.pdf";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -62,7 +62,7 @@ const About = () => {
         </p>
 
         <p className=" text-sm text-gray-600 leading-7 lg:text-base">
-          Foor backend Development,I am familar with server side tools like{" "}
+          For backend Development,I am familar with server side tools like{" "}
           <span className=" text-blue-600">Node Js</span>,
           <span className=" text-blue-600">Express Js</span> for Building
           RESTFUL API'S and <span className=" text-blue-600">Mongo DB</span>. My
