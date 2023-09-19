@@ -22,7 +22,7 @@ const Home = () => {
         transition={{ delay: 1, duration: 1.5 }}
       />
       <div className=" font-medium text-lg capitalize">Hi I'm rex atuzie</div>
-      <h1 className="  text-3xl font-extrabold lg:text-6xl">
+      <h1 className="  text-2xl font-extrabold lg:text-6xl">
         FULLSTACK DEVELOPER
       </h1>
       <div className="  text-center text-gray-400  my-2  font-medium text-xs lg:text-sm">
