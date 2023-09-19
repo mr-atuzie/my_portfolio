@@ -23,10 +23,10 @@ const Home = () => {
       />
       <div className=" font-medium text-lg capitalize">Hi I'm rex atuzie</div>
       <h1 className="  text-3xl font-extrabold lg:text-6xl">
-        FRONTEND DEVELOPER
+        FULLSTACK DEVELOPER
       </h1>
       <div className="  text-center text-gray-400  my-2  font-medium text-xs lg:text-sm">
-        JavaScript | React Js | Tailwind CSS | Typescrpit
+        React Js | Node Js | Express Js | MongoDB
       </div>
       <p className=" w-[90%] mx-auto text-sm leading-7 text-gray-500 lg:px-4 lg:max-w-2xl lg:text-center ">
         Hello 👋 and welcome to my portfolio I am a Highly motivated and skilled
