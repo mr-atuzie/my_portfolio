@@ -1,13 +1,13 @@
 import React from "react";
 // import { BsLink45Deg } from "react-icons/bs";
-import { webPortfolio } from "../data";
+import { photo, vid } from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Portfolio = () => {
   return (
     <div name="portfolio" className=" py-10 w-full">
-      <div className=" mb-5  w-[95%] lg:w-[70%] mx-auto h-full  ">
+      <div className=" mb-5  w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4  lg:mb-7">
           <div>
             <div className=" font-semibold text-xl lg:text-2xl">PORTFOLIO</div>
@@ -37,7 +37,7 @@ const Portfolio = () => {
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {webPortfolio.map(({ id, img }) => {
+            {vid.map(({ id, img }) => {
               return (
                 <SwiperSlide>
                   <PortfolioCard key={id} img={img} />
@@ -64,10 +64,10 @@ const Portfolio = () => {
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {webPortfolio.map(({ id, img }) => {
+            {photo.map(({ id, img }) => {
               return (
                 <SwiperSlide>
-                  <PortfolioCard key={id} img={img} />
+                  <PhotoCard key={id} img={img} />
                 </SwiperSlide>
               );
             })}
@@ -90,36 +90,16 @@ const PortfolioCard = ({ img }) => {
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
-      {/* <div className=" p-2 lg:p-4 ">
-        <div className=" my-3">
-          <h3 className=" text-lg font-medium text-gray-700 capitalize">
-            {name}
-          </h3>
+    </div>
+  );
+};
 
-          <p className="text-gray-500 text-sm lg:text-base mt-2 ">{desc}</p>
-
-          <div className=" flex gap-5 mt-4">
-            <a
-              className=" text-sm lg:text-base flex gap-2 items-center  rounded-full  bg-black text-white px-4 py-2 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsLink45Deg />
-              Use Demo
-            </a>
-            <a
-              className=" text-sm lg:text-base flex gap-2 items-center  rounded-full  bg-black text-white px-4 py-2 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsLink45Deg />
-              See Code
-            </a>
-          </div>
-        </div>
-      </div> */}
+const PhotoCard = ({ img }) => {
+  return (
+    <div id="projects" className="  shadow-md ">
+      <div className=" p-2  ">
+        <img src={img} className="w-full h-[275px] object-cover" alt="" />
+      </div>
     </div>
   );
 };
