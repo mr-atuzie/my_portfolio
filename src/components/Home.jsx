@@ -11,16 +11,16 @@ const Home = () => {
     >
       <motion.img
         src={heroImg}
-        className="w-[300px] lg:w-[300px] h-[300px] lg:h-[300px] rounded-full object-cover"
+        className="w-[250px] lg:w-[300px] h-[250px] lg:h-[300px] rounded-full object-cover"
         alt="porfolioImg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1.5 }}
       />
-      <div className=" font-medium lg:text-lg capitalize">
+      <div className=" font-medium text-sm lg:text-lg capitalize">
         Hi, I'm Jeremiah mbinye
       </div>
-      <h1 className="  text-xl font-extrabold lg:text-6xl">
+      <h1 className="  font-extrabold lg:text-6xl">
         CINEMATOGRAPHER/VIDEO EDITOR
       </h1>
       <div className="  text-center text-gray-400  my-2  font-medium text-xs lg:text-sm">

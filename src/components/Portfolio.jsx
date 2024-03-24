@@ -19,34 +19,60 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <section></section>
-
         <section>
           <div>
             <div className=" font-semibold  text-xl lg:text-2xl">
               Videography
             </div>
 
-            <p className=" mb-2  capitalize text-gray-500">
-              Documentaries ● Youtube content ● Movies ● Weddings ● After
-              effects ● short films ● Reels ● Product/Brade ad.
-            </p>
+            <h3 className=" mb-2  capitalize text-gray-600">
+              ● Documentaries ● Youtube content ● Movies ● Weddings ●
+              After-effects ● short films ● Reels ● Product/Brade ad.
+            </h3>
           </div>
+
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1.2}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {webPortfolio.map(({ id, img }) => {
+              return (
+                <SwiperSlide>
+                  <PortfolioCard key={id} img={img} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </section>
-        <Swiper
-          spaceBetween={10}
-          slidesPerView={1.2}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          {webPortfolio.map(({ id, img }) => {
-            return (
-              <SwiperSlide>
-                <PortfolioCard key={id} img={img} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+
+        <section className="mt-6">
+          <div>
+            <div className=" font-semibold  text-xl lg:text-2xl">
+              Photography
+            </div>
+
+            <h3 className=" mb-2  capitalize text-gray-600">
+              ● Product shot ● Model stot ● Wedding shot ● Drone shot
+            </h3>
+          </div>
+
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1.2}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {webPortfolio.map(({ id, img }) => {
+              return (
+                <SwiperSlide>
+                  <PortfolioCard key={id} img={img} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </section>
       </div>
     </div>
   );

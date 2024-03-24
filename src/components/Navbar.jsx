@@ -28,7 +28,7 @@ const Navbar = () => {
           src={logo}
           alt=""
         />
-        <h1 className="  font-semibold ">Jeremiah mbinye</h1>
+        <h1 className=" text-sm  font-semibold ">Jeremiah mbinye</h1>
       </div>
 
       <ul className="hidden md:flex">
@@ -79,7 +79,7 @@ const Navbar = () => {
                 src={logo}
                 alt=""
               />
-              <h1 className="  text-xl lg:text-5xl font-semibold ">
+              <h1 className="  text-sm lg:text-5xl font-semibold ">
                 Jeremiah mbinye
               </h1>
             </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
               return (
                 <li
                   key={id}
-                  className=" px-4 cursor-pointer capitalize  mb-5  hover:scale-105 duration-200"
+                  className=" px-4 cursor-pointer capitalize  mb-4  hover:scale-105 duration-200"
                 >
                   <Link
                     onClick={() => setNav(false)}
