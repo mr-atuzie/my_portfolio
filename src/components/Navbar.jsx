@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
-import resume from "../assets/fs.pdf";
+import resume from "../assets/cv.pdf";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import logo from "../assets/jerry.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const links = [
     { id: 1, link: "home" },
     { id: 3, link: "About" },
-    { id: 4, link: "Certifications" },
     { id: 2, link: "projects" },
     { id: 5, link: "Contact Me" },
   ];
@@ -22,10 +22,13 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ delay: 0.3, type: "tween" }}
     >
-      <div>
-        <h1 className="  text-3xl lg:text-5xl font-semibold  ml-2">
-          Rex atuzie
-        </h1>
+      <div className="flex items-center gap-1">
+        <img
+          className="w-14 h-14 rounded-full object-cover"
+          src={logo}
+          alt=""
+        />
+        <h1 className="  font-semibold ">Jeremiah mbinye</h1>
       </div>
 
       <ul className="hidden md:flex">
@@ -60,23 +63,25 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div
+      <button
         onClick={() => setNav(!nav)}
-        className=" cursor-pointer  pr-4 md:hidden"
+        className=" border shadow-md p-1 bg-white rounded-md lg:hidden z-50"
       >
         {nav ? <IoCloseOutline size={30} /> : <HiOutlineBars3 size={30} />}
-      </div>
+      </button>
 
       {nav && (
         <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[90vw] h-screen">
           <div className=" bg-white p-4 flex justify-between items-center">
-            <div>
+            <div className="flex items-center gap-1">
+              <img
+                className="w-14 h-14 rounded-full object-cover"
+                src={logo}
+                alt=""
+              />
               <h1 className="  text-xl lg:text-5xl font-semibold ">
-                Rex atuzie
+                Jeremiah mbinye
               </h1>
-              <p className=" text-gray-500 font-medium text-xs">
-                Frontend Developer
-              </p>
             </div>
             <div
               onClick={() => setNav(!nav)}
@@ -89,7 +94,7 @@ const Navbar = () => {
               )}
             </div>
           </div>
-          <ul className=" mt-11 ">
+          <ul className=" mt-8 ">
             {links.map(({ id, link }) => {
               return (
                 <li
@@ -112,7 +117,7 @@ const Navbar = () => {
             })}
           </ul>
           <a
-            className=" m-4 rounded-full  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+            className=" m-4 rounded-full text-center  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
             href={resume}
             download
           >

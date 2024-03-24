@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../assets/fs.pdf";
+import resume from "../assets/cv.pdf";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -9,78 +9,62 @@ const About = () => {
     <motion.div
       id="About"
       name="about"
-      className=" w-full   "
+      className=" w-full  bg-gray-50 py-2 rounded-t-3xl  "
       initial={{ x: "-100vw" }}
       animate={{ x: 0 }}
       transition={{ type: "spring", delay: 0.5 }}
     >
       <div className=" w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" my-4">
-          <div className=" font-semibold text-2xl">ABOUT ME</div>
+          <div className=" font-semibold text-xl lg:text-2xl">ABOUT ME</div>
           <div className="w-[70px] rounded-lg h-[4px] bg-red-600"></div>
         </div>
         <p className=" text-gray-600 leading-7 text-sm lg:text-base">
-          I'm a MERN Stack Developer with a proven track record of building
-          full-stack web applications using MongoDB, Express.js, React, and
-          Node.js. With 2 years of hands-on experience, I specialize in creating
-          scalable and responsive web solutions that provide exceptional user
-          experiences. Proficient in both frontend and backend development, I
-          excel at designing intuitive user interfaces, implementing robust
-          APIs, and optimizing application performance.
+          An artist's eye and a technician's precision, they weave together a
+          tapestry of sights and sounds that transcend mere footage. Each edit
+          is a brushstroke, meticulously crafted to paint a vivid picture that
+          resonates with audiences long after the screen fades to black.
         </p>
 
-        <p className=" text-gray-600 my-7 text-sm lg:text-base leading-7">
-          My technical skill set includes proficiency in{" "}
-          <span className=" text-blue-600">HTML</span> ,{" "}
-          <span className=" text-blue-600">CSS</span> and
-          <span className=" text-blue-600"> JavaScript.</span> I am particularly
-          skilled in working with JavaScript frameworks such as{" "}
-          <span className=" text-blue-600"> React Js</span>
-          {/* , I'm also
-          experienced in using{" "} */}
-          {/* <span className=" text-blue-600"> Typscript </span> and other popular
-          frontend libaries like{" "} */}
-          <span className=" text-blue-600"> Tailwind CSS </span> ,{" "}
-          <span className=" text-blue-600"> Redux</span>
-          {/* as well as{" "}
-          <span className=" text-blue-600"> Git</span> for version control . as
-          while
-          <span className=" text-blue-600">
-            {" "}
-            Integration of third party API's{" "}
-          </span> */}
-          ,
-          <span className=" text-blue-600">
-            Ensure cross browser and cross-platform compatibility{" "}
-          </span>
-          and building{" "}
-          <span className=" text-blue-600">Responsive web applications</span> to
-          fit any screen size. Im also have experience working with{" "}
-          {/* <span className=" text-blue-600"> Google Firebase </span>  */}
-          {/* for backend cloud computing services It hosts databases,
-          authentication e.t.c, */}
+        <p className=" text-gray-600 mt-5 text-sm lg:text-base leading-7">
+          With a BSc. Degree in Economics from the prestigious University of
+          Port Harcourt and over 9 years of mastering the art of visual
+          storytelling with the various softwares provided, I have been
+          privileged in handling various projects for various organizations and
+          also being able to carry out the role as Team Lead in diverse
+          capacity.
         </p>
 
-        <p className=" text-sm text-gray-600 leading-7 lg:text-base">
-          For backend Development,I am familar with server side tools like{" "}
-          <span className=" text-blue-600">Node Js</span>,
-          <span className=" text-blue-600">Express Js</span> for Building
-          RESTFUL API'S and <span className=" text-blue-600">Mongo DB</span>. My
-          passion for staying up-to-date with the latest technologies and best
-          practices ensures that I can contribute effectively to any dynamic
-          development team. Ready to leverage my expertise to drive innovation
-          and deliver high-quality software solutions.
+        <p className=" text-sm mt-5 text-gray-600 leading-7 lg:text-base">
+          it's not just about technical prowess; it's about storytelling
+          prowess. Behind every seamless cut lies a deep understanding of
+          narrative structure and emotional resonance. They are the architects
+          of emotion, sculpting arcs of tension and release that keep viewers on
+          the edge of their seats.
         </p>
 
-        <div className=" mt-8">
-          <a
-            className=" rounded-full  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
-            href={resume}
-            download
-          >
-            Download Resume
-          </a>
-        </div>
+        <p className=" text-sm mt-5 text-gray-600 leading-7 lg:text-base">
+          In the fast-paced world of visual media, they are the unsung heroes,
+          tirelessly perfecting their craft to bring dreams to life on the
+          silver screen. Their passion fuels their relentless pursuit of
+          excellence, pushing boundaries and redefining what's possible with
+          every project they undertake.
+        </p>
+
+        <p className=" text-sm text-gray-600 mt-5 leading-7 lg:text-base">
+          So, if you find yourself transported to distant galaxies, swept away
+          by epic adventures, or moved to tears by a poignant moment – remember,
+          it's the magic of the video editor and cinematographer at work,
+          shaping reality into something truly extraordinary.
+        </p>
+
+        <a
+          className=" block rounded-full my-8 text-center mx-auto lg:max-w-lg  bg-black text-white px-4 py-3 capitalize hover:bg-white hover:text-black hover:border-2 hover:border-black "
+          href={resume}
+          download
+        >
+          Download Resume
+        </a>
       </div>
     </motion.div>
   );
