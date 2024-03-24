@@ -29,7 +29,17 @@ export const photo = [
   },
   {
     id: 5,
-    img: "https://youtube.com/shorts/_BEdDynwTIQ?si=VdkPSjFcdog73fV9",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8at0dZ35SGcq-yMMMueXyKoKhelPzDFsCSQ&usqp=CAU",
+    link: "https://whimsical-paletas-07010e.netlify.app/",
+  },
+  {
+    id: 6,
+    img: "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1268799256v2.jpg",
+    link: "https://whimsical-paletas-07010e.netlify.app/",
+  },
+  {
+    id: 7,
+    img: "https://www.channelstv.com/wp-content/uploads/2023/02/Nigeria-army-officers-patrol.jpg",
     link: "https://whimsical-paletas-07010e.netlify.app/",
   },
 ];

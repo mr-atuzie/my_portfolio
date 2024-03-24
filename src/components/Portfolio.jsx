@@ -25,7 +25,7 @@ const Portfolio = () => {
               Videography
             </div>
 
-            <h3 className=" mb-2  capitalize text-gray-600">
+            <h3 className=" mb-2 text-xs capitalize text-gray-600">
               ● Documentaries ● Youtube content ● Movies ● Weddings ●
               After-effects ● short films ● Reels ● Product/Brade ad.
             </h3>
@@ -53,25 +53,16 @@ const Portfolio = () => {
               Photography
             </div>
 
-            <h3 className=" mb-2  capitalize text-gray-600">
+            <h3 className=" mb-2 text-xs capitalize text-gray-600">
               ● Product shot ● Model stot ● Wedding shot ● Drone shot
             </h3>
           </div>
 
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={1.2}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
             {photo.map(({ id, img }) => {
-              return (
-                <SwiperSlide>
-                  <PhotoCard key={id} img={img} />
-                </SwiperSlide>
-              );
+              return <PhotoCard key={id} img={img} />;
             })}
-          </Swiper>
+          </div>
         </section>
       </div>
     </div>
@@ -96,8 +87,8 @@ const PortfolioCard = ({ img }) => {
 
 const PhotoCard = ({ img }) => {
   return (
-    <div id="projects" className="  shadow-md ">
-      <div className=" p-2  ">
+    <div id="projects" className=" border  shadow-md ">
+      <div className="  ">
         <img src={img} className="w-full h-[275px] object-cover" alt="" />
       </div>
     </div>
