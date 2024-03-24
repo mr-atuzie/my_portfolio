@@ -18,6 +18,21 @@ const Portfolio = () => {
             These are some of the projects I've been working on lately
           </p>
         </div>
+
+        <section></section>
+
+        <section>
+          <div>
+            <div className=" font-semibold  text-xl lg:text-2xl">
+              Videography
+            </div>
+
+            <p className=" mb-2  capitalize text-gray-500">
+              Documentaries ● Youtube content ● Movies ● Weddings ● After
+              effects ● short films ● Reels ● Product/Brade ad.
+            </p>
+          </div>
+        </section>
         <Swiper
           spaceBetween={10}
           slidesPerView={1.2}
