@@ -2,7 +2,10 @@ import React from "react";
 // import { BsLink45Deg } from "react-icons/bs";
 import { photo, vid } from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Portfolio = () => {
   return (
@@ -14,7 +17,7 @@ const Portfolio = () => {
             <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
           </div>
 
-          <p className=" mt-2 lg:mt-4  text-gray-500">
+          <p className="text-sm lg:text-base mt-2 lg:mt-4  text-gray-500">
             These are some of the projects I've been working on lately
           </p>
         </div>
@@ -25,7 +28,7 @@ const Portfolio = () => {
               Videography
             </div>
 
-            <h3 className=" mb-2 text-xs capitalize text-gray-600">
+            <h3 className="leading-4 mb-2 text-xs capitalize text-gray-600 tracking-wide li">
               ● Documentaries ● Youtube content ● Movies ● Weddings ●
               After-effects ● short films ● Reels ● Product/Brade ad.
             </h3>
@@ -36,6 +39,12 @@ const Portfolio = () => {
             slidesPerView={1.2}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
           >
             {vid.map(({ id, img }) => {
               return (

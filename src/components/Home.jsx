@@ -17,7 +17,7 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1.5 }}
       />
-      <div className=" font-medium text-sm lg:text-lg capitalize">
+      <div className=" font-semibold text-sm lg:text-lg capitalize">
         Hi, I'm Jeremiah mbinye
       </div>
       <h1 className="  font-extrabold lg:text-6xl">
@@ -27,7 +27,7 @@ const Home = () => {
         Adobe Premire Pro/ After Effect/ Davince Resolve/ Cap cut /Adobe
         Photoshop
       </div>
-      <p className=" w-[90%] mx-auto text-sm leading-7 text-gray-500 lg:px-4 lg:max-w-2xl lg:text-center ">
+      <p className=" text-center w-[90%] mx-auto text-sm leading-7 text-gray-500 lg:px-4 lg:max-w-2xl lg:text-center ">
         Step into the realm of visual storytelling, where every frame holds the
         power to captivate, evoke emotions, and transport viewers to realms
         beyond imagination. Meet the maestro behind the lens, the architect of

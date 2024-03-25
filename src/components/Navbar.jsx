@@ -28,7 +28,7 @@ const Navbar = () => {
           src={logo}
           alt=""
         />
-        <h1 className=" text-sm  font-semibold ">Jeremiah mbinye</h1>
+        <h1 className=" text-sm uppercase  font-semibold ">Jeremiah mbinye</h1>
       </div>
 
       <ul className="hidden md:flex">
