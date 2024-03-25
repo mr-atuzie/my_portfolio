@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BsGithub,
-  BsLinkedin,
-  BsTwitter,
-  BsFillEnvelopeFill,
-} from "react-icons/bs";
+import { BsFillEnvelopeFill } from "react-icons/bs";
 
 const Contact = () => {
   return (
@@ -18,56 +13,52 @@ const Contact = () => {
             <div className="w-[70px] rounded-lg h-[4px] bg-green-600"></div>
           </div>
 
-          <p className=" mt-2 text-sm lg:text-base  text-gray-500 ">
-            Have a project for me ? or just want to say Hi? Just send me an
-            email 😊
+          <p className=" mt-2 text-xs lg:text-base  text-gray-500 ">
+            Have a project for me ? Let's connect
           </p>
 
-          <div className=" flex flex-col lg:flex-row items-start gap-6 lg:gap-0 lg:items-center mt-6 justify-start lg:justify-between">
-            <div>
+          <div className=" flex  gap-4 justify-center mt-2">
+            <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
-                className=" flex items-center gap-1 "
+                className=" text-white flex items-center gap-1 "
                 href=" https://twitter.com/IkwerreG"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <BsFillEnvelopeFill size={20} />
-                <div className=" text-lg text-blue-600">Email</div>
               </a>
             </div>
 
-            <div>
+            <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
-                className=" flex items-center gap-1 "
+                className=" text-white flex items-center gap-1 "
                 href=" https://twitter.com/IkwerreG"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsTwitter size={20} />
-                <div className=" text-lg text-blue-600">Twitter</div>
+                <BsFillEnvelopeFill size={20} />
               </a>
             </div>
 
-            <div>
+            <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
-                className=" flex items-center gap-1 "
-                href="https://www.linkedin.com/in/rex-atuzie-0ab678205/"
+                className=" text-white flex items-center gap-1 "
+                href=" https://twitter.com/IkwerreG"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsLinkedin size={20} />
-                <div className=" text-lg text-blue-600">LinkedIn</div>
+                <BsFillEnvelopeFill size={20} />
               </a>
             </div>
-            <div>
+
+            <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
-                className=" flex items-center gap-1 "
-                href="https://github.com/mr-atuzie/"
+                className=" text-white flex items-center gap-1 "
+                href=" https://twitter.com/IkwerreG"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsGithub size={20} />
-                <div className=" text-lg text-blue-600">Github</div>
+                <BsFillEnvelopeFill size={20} />
               </a>
             </div>
           </div>

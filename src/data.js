@@ -29,7 +29,7 @@ export const photo = [
   },
   {
     id: 5,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8at0dZ35SGcq-yMMMueXyKoKhelPzDFsCSQ&usqp=CAU",
+    img: "https://www.state.gov/wp-content/uploads/2019/04/Nigeria-2109x1406-1.jpg",
     link: "https://whimsical-paletas-07010e.netlify.app/",
   },
   {
