@@ -2,7 +2,7 @@ import React from "react";
 // import { BsLink45Deg } from "react-icons/bs";
 import { photo, vid } from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -39,7 +39,7 @@ const Portfolio = () => {
             slidesPerView={1.2}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
-            modules={[Pagination, Autoplay]}
+            modules={[Pagination, Autoplay, A11y]}
             pagination={{ clickable: true }}
             autoplay={{
               delay: 3000,

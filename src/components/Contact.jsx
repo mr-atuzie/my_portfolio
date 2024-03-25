@@ -1,19 +1,19 @@
 import React from "react";
-import { BsFillEnvelopeFill } from "react-icons/bs";
+import { FaInstagram, FaYoutube, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div id="Contact Me" name="contact" className=" py-10 w-full">
       <div className="  w-[90%] lg:w-[70%] mx-auto h-full  ">
-        <div className=" mb-4 ">
-          <div>
-            <div className="  font-semibold text-xl lg:text-2xl">
+        <div className=" mb-4 flex flex-col justify-center ">
+          <div className=" flex flex-col justify-center w-full">
+            <div className=" text-center  font-semibold text-xl lg:text-2xl">
               CONTACT ME
             </div>
-            <div className="w-[70px] rounded-lg h-[4px] bg-green-600"></div>
+            <div className="w-[70px] mx-auto rounded-lg h-[4px] bg-green-600"></div>
           </div>
 
-          <p className=" mt-2 text-xs lg:text-base  text-gray-500 ">
+          <p className=" mt-2 text-xs lg:text-base text-center  text-gray-500 ">
             Have a project for me ? Let's connect
           </p>
 
@@ -25,7 +25,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsFillEnvelopeFill size={20} />
+                <FaInstagram size={20} />
               </a>
             </div>
 
@@ -36,7 +36,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsFillEnvelopeFill size={20} />
+                <FaYoutube size={20} />
               </a>
             </div>
 
@@ -47,7 +47,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsFillEnvelopeFill size={20} />
+                <FaTwitter size={20} />
               </a>
             </div>
 
@@ -58,7 +58,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsFillEnvelopeFill size={20} />
+                <FaLinkedin size={20} />
               </a>
             </div>
           </div>
