@@ -63,10 +63,10 @@ const Contact = () => {
             </div>
           </div>
 
-          <p className=" text-center text-sm mt-2 font-medium">
+          <p className=" text-center text-xs mt-2 font-medium">
             {" "}
             <span className=" uppercase text-xs font-semibold mr-1">
-              Call/whatsapp
+              Call / whatsapp
             </span>
             0703 802 4064
           </p>
