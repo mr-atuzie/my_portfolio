@@ -28,7 +28,7 @@ const Portfolio = () => {
               Videography
             </div>
 
-            <h3 className="leading-4 mb-2 text-xs capitalize text-gray-600 tracking-wide">
+            <h3 className="leading-4 mb-2 text-[10px] capitalize text-gray-600 tracking-wide">
               ● Documentaries ● Youtube content ● Movies ● Weddings ●
               After-effects ● short films ● Reels ● Product/Brade ad.
             </h3>
@@ -62,7 +62,7 @@ const Portfolio = () => {
               Photography
             </div>
 
-            <h3 className="leading-4 mb-2 text-xs capitalize text-gray-600 tracking-wide">
+            <h3 className="leading-4 mb-2 text-[10px] capitalize text-gray-600 tracking-wide">
               ● Product shot ● Model stot ● Wedding shot ● Drone shot
             </h3>
           </div>
