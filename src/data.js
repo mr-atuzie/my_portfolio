@@ -20,26 +20,25 @@ export const photo = [
   {
     id: 2,
     img: "https://nairametrics.com/wp-content/uploads/2022/10/00NigerianWedding2-superJumbo.jpg",
-    link: "https://scintillating-gumdrop-389a23.netlify.app/",
   },
   {
     id: 4,
     img: "https://pbs.twimg.com/media/FvbOT-OWYAIO8JX.jpg:large",
-    link: "https://whimsical-paletas-07010e.netlify.app/",
   },
   {
     id: 5,
     img: "https://www.state.gov/wp-content/uploads/2019/04/Nigeria-2109x1406-1.jpg",
-    link: "https://whimsical-paletas-07010e.netlify.app/",
   },
   {
     id: 6,
     img: "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1268799256v2.jpg",
-    link: "https://whimsical-paletas-07010e.netlify.app/",
   },
   {
     id: 7,
     img: "https://www.channelstv.com/wp-content/uploads/2023/02/Nigeria-army-officers-patrol.jpg",
-    link: "https://whimsical-paletas-07010e.netlify.app/",
+  },
+  {
+    id: 8,
+    img: "https://expertphotography.b-cdn.net/wp-content/uploads/2020/09/rules-for-product-photography.jpg",
   },
 ];
