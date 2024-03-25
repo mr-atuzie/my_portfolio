@@ -3,7 +3,7 @@ import { FaInstagram, FaYoutube, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div id="Contact Me" name="contact" className=" py-10 w-full">
+    <div id="Contact Me" name="contact" className=" py-5 lg:py-10 w-full">
       <div className="  w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4 flex flex-col justify-center ">
           <div className=" flex flex-col justify-center w-full">
@@ -21,7 +21,7 @@ const Contact = () => {
             <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
                 className=" text-white flex items-center gap-1 "
-                href=" https://twitter.com/IkwerreG"
+                href="https://www.instagram.com/_jerry_chile?igsh=MXZyZXkxZ2t2Nzh5Yw%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -32,7 +32,7 @@ const Contact = () => {
             <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
                 className=" text-white flex items-center gap-1 "
-                href=" https://twitter.com/IkwerreG"
+                href="https://youtube.com/@JB_Visuals.?si=nsecgpQgLMTXLDRX"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,7 +43,7 @@ const Contact = () => {
             <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
                 className=" text-white flex items-center gap-1 "
-                href=" https://twitter.com/IkwerreG"
+                href=" https://twitter.com/Jeremiah_Chile"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -54,7 +54,7 @@ const Contact = () => {
             <div className=" w-[40px] h-[40px] bg-black rounded-full text-center flex justify-center items-center">
               <a
                 className=" text-white flex items-center gap-1 "
-                href=" https://twitter.com/IkwerreG"
+                href="https://www.linkedin.com/in/jeremiah-chile-82825a19a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -62,6 +62,8 @@ const Contact = () => {
               </a>
             </div>
           </div>
+
+          <p className=" text-center text-sm mt-1 font-medium">0703 802 4064</p>
         </div>
       </div>
     </div>

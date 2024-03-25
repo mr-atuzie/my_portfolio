@@ -67,7 +67,7 @@ const Navbar = () => {
         onClick={() => setNav(!nav)}
         className=" border shadow-md p-1 bg-white rounded-md lg:hidden z-50"
       >
-        {nav ? <IoCloseOutline size={30} /> : <HiOutlineBars3 size={30} />}
+        {nav ? <IoCloseOutline size={25} /> : <HiOutlineBars3 size={25} />}
       </button>
 
       {nav && (
