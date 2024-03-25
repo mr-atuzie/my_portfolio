@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroImg from "../assets/jerry.png";
+import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -26,6 +27,51 @@ const Home = () => {
       <div className="  text-center text-gray-400  my-2  font-medium text-xs lg:text-sm">
         Adobe Premire Pro/ After Effect/ Davince Resolve/ Cap cut /Adobe
         Photoshop
+      </div>
+      <div className=" flex  gap-4 justify-center my-2">
+        <div className=" w-[30px] h-[30px] bg-black rounded-full text-center flex justify-center items-center">
+          <a
+            className=" text-white flex items-center gap-1 "
+            href="https://www.instagram.com/_jerry_chile?igsh=MXZyZXkxZ2t2Nzh5Yw%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram size={20} />
+          </a>
+        </div>
+
+        <div className=" w-[30px] h-[30px] bg-black rounded-full text-center flex justify-center items-center">
+          <a
+            className=" text-white flex items-center gap-1 "
+            href="https://youtube.com/@JB_Visuals.?si=nsecgpQgLMTXLDRX"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaYoutube size={20} />
+          </a>
+        </div>
+
+        <div className=" w-[30px] h-[30px] bg-black rounded-full text-center flex justify-center items-center">
+          <a
+            className=" text-white flex items-center gap-1 "
+            href=" https://twitter.com/Jeremiah_Chile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter size={20} />
+          </a>
+        </div>
+
+        <div className=" w-[30px] h-[30px] bg-black rounded-full text-center flex justify-center items-center">
+          <a
+            className=" text-white flex items-center gap-1 "
+            href="https://www.linkedin.com/in/jeremiah-chile-82825a19a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={20} />
+          </a>
+        </div>
       </div>
       <p className=" text-center w-[90%] mx-auto text-sm leading-7 text-gray-500 lg:px-4 lg:max-w-2xl lg:text-center ">
         Step into the realm of visual storytelling, where every frame holds the

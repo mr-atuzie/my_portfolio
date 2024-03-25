@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-1">
         <img
-          className="w-14 h-14 rounded-full object-cover"
+          className="w-12 h-12 rounded-full object-cover"
           src={logo}
           alt=""
         />
@@ -75,11 +75,11 @@ const Navbar = () => {
           <div className=" bg-white p-4 flex justify-between items-center">
             <div className="flex items-center gap-1">
               <img
-                className="w-14 h-14 rounded-full object-cover"
+                className="w-12 h-12 rounded-full object-cover"
                 src={logo}
                 alt=""
               />
-              <h1 className="  text-sm lg:text-5xl font-semibold ">
+              <h1 className=" uppercase  text-sm lg:text-5xl font-semibold ">
                 Jeremiah mbinye
               </h1>
             </div>
