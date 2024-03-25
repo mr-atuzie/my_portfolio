@@ -83,7 +83,7 @@ const Navbar = () => {
                 Jeremiah mbinye
               </h1>
             </div>
-            <div
+            {/* <div
               onClick={() => setNav(!nav)}
               className=" cursor-pointer  p-4 md:hidden"
             >
@@ -92,7 +92,7 @@ const Navbar = () => {
               ) : (
                 <HiOutlineBars3 size={30} />
               )}
-            </div>
+            </div> */}
           </div>
           <ul className=" mt-8 ">
             {links.map(({ id, link }) => {
