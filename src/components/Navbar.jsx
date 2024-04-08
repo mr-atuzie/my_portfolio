@@ -9,10 +9,9 @@ import logo from "../assets/jerry.png";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const links = [
-    { id: 1, link: "home" },
-    { id: 3, link: "About" },
-    { id: 2, link: "projects" },
-    { id: 5, link: "Contact Me" },
+    { id: 1, link: "/", name: "home" },
+    { id: 6, link: "/videography", name: "videography" },
+    { id: 7, link: "/photography", name: "photography" },
   ];
 
   return (
@@ -32,7 +31,7 @@ const Navbar = () => {
       </div>
 
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => {
+        {links.map(({ id, link, name }) => {
           return (
             <li
               key={id}
@@ -46,7 +45,7 @@ const Navbar = () => {
                 offset={50}
                 duration={500}
               >
-                {link}
+                {name}
               </Link>
             </li>
           );
@@ -95,7 +94,7 @@ const Navbar = () => {
             </div> */}
           </div>
           <ul className=" mt-8 ">
-            {links.map(({ id, link }) => {
+            {links.map(({ id, link, name }) => {
               return (
                 <li
                   key={id}
@@ -110,7 +109,7 @@ const Navbar = () => {
                     offset={50}
                     duration={500}
                   >
-                    {link}
+                    {name}
                   </Link>
                 </li>
               );

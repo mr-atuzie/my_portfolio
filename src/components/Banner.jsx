@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import heroImg from "../assets/jerry.png";
 import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
-const Home = () => {
+const Banner = () => {
   return (
     <div
       id="home"
@@ -83,4 +83,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Banner;

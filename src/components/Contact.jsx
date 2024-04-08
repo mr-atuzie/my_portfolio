@@ -3,7 +3,7 @@ import { FaInstagram, FaYoutube, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div id="Contact Me" name="contact" className=" py-5 lg:py-10 w-full">
+    <div id="contact me" name="contact" className=" py-5 lg:py-10 w-full">
       <div className="  w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4 flex flex-col justify-center ">
           <div className=" flex flex-col justify-center w-full">

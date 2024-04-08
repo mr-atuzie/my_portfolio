@@ -6,6 +6,7 @@ import { Pagination, Autoplay, A11y, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
@@ -24,8 +25,16 @@ const Portfolio = () => {
 
         <section>
           <div>
-            <div className=" font-semibold  text-xl lg:text-2xl">
-              Videography
+            <div className=" flex justify-between items-center">
+              <div className=" font-semibold  text-xl lg:text-2xl">
+                Videography
+              </div>
+
+              <Link to={"/vid"}>
+                <div className=" cursor-pointer text-xs uppercase font-medium  text-gray-600">
+                  see more
+                </div>
+              </Link>
             </div>
 
             <h3 className="leading-4 mb-2 text-[10px] capitalize text-gray-600 tracking-wide">
@@ -85,10 +94,10 @@ const PortfolioCard = ({ img }) => {
         className="w-full h-[315px] rounded"
         src={img}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     </div>
   );

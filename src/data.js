@@ -3,16 +3,19 @@ export const vid = [
     id: 2,
     img: "https://www.youtube.com/embed/4TfmdVIkA0o?si=wWg67u_bWklUi-HH",
     link: "https://scintillating-gumdrop-389a23.netlify.app/",
+    cat: "short films",
   },
   {
     id: 4,
     img: "https://www.youtube.com/embed/hBr2TCMZR1o?si=hapeCg6jaFM-czqx",
     link: "https://whimsical-paletas-07010e.netlify.app/",
+    cat: "Documentaries",
   },
   {
     id: 5,
     img: "https://youtube.com/shorts/_BEdDynwTIQ?si=VdkPSjFcdog73fV9",
     link: "https://whimsical-paletas-07010e.netlify.app/",
+    cat: "Weddings",
   },
 ];
 
