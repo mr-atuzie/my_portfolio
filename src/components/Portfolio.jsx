@@ -30,7 +30,7 @@ const Portfolio = () => {
                 Videography
               </div>
 
-              <Link to={"/vid"}>
+              <Link to={"/videography"}>
                 <div className=" cursor-pointer text-xs uppercase font-medium  text-gray-600">
                   see more
                 </div>
