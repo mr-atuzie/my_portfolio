@@ -32,10 +32,14 @@ const Vid = () => {
     <div className="  w-full">
       <div className=" mb-5  w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div>
-          <div className=" font-semibold  text-xl lg:text-2xl">Videography</div>
+          <div className=" mb-4">
+            <div className=" font-semibold text-xl lg:text-2xl">
+              VIDEOGRAPHY
+            </div>
+            <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
+          </div>
 
-          <div className=" overflow-x-scroll no-scrollbar flex gap-3 mt-2 ">
-            <button></button>
+          <div className=" overflow-x-scroll no-scrollbar flex gap-3 my-2 ">
             {category.map((c, index) => {
               return (
                 <button
@@ -50,7 +54,7 @@ const Vid = () => {
               );
             })}
           </div>
-          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 mt-3">
+          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 my-3">
             {videos.map(({ id, img }) => {
               return <PortfolioCard key={id} img={img} />;
             })}

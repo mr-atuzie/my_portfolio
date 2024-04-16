@@ -3,8 +3,8 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 import resume from "../assets/cv.pdf";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
 import logo from "../assets/jerry.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -12,6 +12,7 @@ const Navbar = () => {
     { id: 1, link: "/", name: "home" },
     { id: 6, link: "/videography", name: "videography" },
     { id: 7, link: "/photography", name: "photography" },
+    { id: 2, link: "/admin", name: "Admin" },
   ];
 
   return (
@@ -37,16 +38,7 @@ const Navbar = () => {
               key={id}
               className=" capitalize px-4 cursor-pointer font-medium  hover:scale-105 duration-200"
             >
-              <Link
-                activeClass="active"
-                to={link}
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                {name}
-              </Link>
+              <Link to={link}>{name}</Link>
             </li>
           );
         })}

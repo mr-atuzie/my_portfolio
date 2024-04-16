@@ -9,8 +9,25 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
+  const vidCategory = [
+    "Documentaries",
+    "Youtube content",
+    "Weddings",
+    "After-effects",
+    "short films",
+    "Reels",
+    "Product/Brade ad",
+  ];
+
+  const photoCategory = [
+    "Product shot",
+    "Model stot",
+    "Wedding shot",
+    "Drone shot",
+  ];
+
   return (
-    <div name="portfolio" className=" py-10 w-full">
+    <div name="portfolio" className=" bg-gray-50 py-10 w-full">
       <div className=" mb-5  w-[90%] lg:w-[70%] mx-auto h-full  ">
         <div className=" mb-4  lg:mb-7">
           <div>
@@ -26,7 +43,7 @@ const Portfolio = () => {
         <section>
           <div>
             <div className=" flex justify-between items-center">
-              <div className=" font-semibold  text-xl lg:text-2xl">
+              <div className=" uppercase font-semibold   lg:text-2xl">
                 Videography
               </div>
 
@@ -37,10 +54,18 @@ const Portfolio = () => {
               </Link>
             </div>
 
-            <h3 className="leading-4 mb-2 text-[10px] capitalize text-gray-600 tracking-wide">
-              ● Documentaries ● Youtube content ● Movies ● Weddings ●
-              After-effects ● short films ● Reels ● Product/Brade ad.
-            </h3>
+            <div className=" overflow-x-scroll no-scrollbar flex gap-2 my-2 ">
+              {vidCategory.map((c, index) => {
+                return (
+                  <button
+                    key={index}
+                    className="t bg-white text-xs  border  capitalize   p-2 rounded-md  whitespace-nowrap"
+                  >
+                    {c}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <Swiper
@@ -67,13 +92,22 @@ const Portfolio = () => {
 
         <section className="mt-6">
           <div>
-            <div className=" font-semibold  text-xl lg:text-2xl">
+            <div className=" uppercase font-semibold   lg:text-2xl">
               Photography
             </div>
 
-            <h3 className="leading-4 mb-2 text-[10px] capitalize text-gray-600 tracking-wide">
-              ● Product shot ● Model stot ● Wedding shot ● Drone shot
-            </h3>
+            <div className=" overflow-x-scroll no-scrollbar flex gap-2 my-2 ">
+              {photoCategory.map((c, index) => {
+                return (
+                  <button
+                    key={index}
+                    className="t bg-white text-xs  border  capitalize   p-2 rounded-md  whitespace-nowrap"
+                  >
+                    {c}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
@@ -105,9 +139,9 @@ const PortfolioCard = ({ img }) => {
 
 const PhotoCard = ({ img }) => {
   return (
-    <div id="projects" className=" border  shadow-md ">
-      <div className="  ">
-        <img src={img} className="w-full h-[275px] object-cover" alt="" />
+    <div id="projects" className=" border  5">
+      <div className=" bg-white pb-8  ">
+        <img src={img} className="w-full h-[205px] object-cover" alt="" />
       </div>
     </div>
   );
