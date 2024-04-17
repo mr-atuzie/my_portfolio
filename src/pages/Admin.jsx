@@ -71,7 +71,7 @@ const Admin = () => {
               {imagePreview !== null && (
                 <button
                   // onClick={savePhoto}
-                  className=" rounded-md bg-black text-white w-fit p-2 flex gap-1 items-center"
+                  className=" rounded-md  bg-black text-white w-full p-2 flex gap-1 items-center"
                 >
                   Upload photo
                 </button>
@@ -80,7 +80,12 @@ const Admin = () => {
           </div>
           <form className="  flex flex-col gap-3">
             <div>
-              <label htmlFor="image">Change Pic</label>
+              <label
+                className=" w-56 h-56 text-gray-500 rounded-md  bg-slate-300 flex justify-center items-center object-cover"
+                htmlFor="image"
+              >
+                Upload Pic
+              </label>
               <input
                 className=" hidden p-2.5 rounded-xl  w-full lg:w-[350px]"
                 type="file"
