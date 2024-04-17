@@ -12,7 +12,7 @@ const Navbar = () => {
     { id: 1, link: "/", name: "home" },
     { id: 6, link: "/videography", name: "videography" },
     { id: 7, link: "/photography", name: "photography" },
-    { id: 2, link: "/admin", name: "Admin" },
+    { id: 2, link: "/login", name: "Admin" },
   ];
 
   return (
