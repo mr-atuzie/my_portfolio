@@ -9,7 +9,7 @@ const Login = () => {
 
         <input
           type="password"
-          className=" w-full border placeholder:font-normal p-2.5 "
+          className=" w-full border placeholder:font-normal bg-gray-50 p-2.5 "
           placeholder=" Enter password"
         />
 
