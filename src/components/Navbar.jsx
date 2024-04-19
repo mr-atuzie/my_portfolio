@@ -62,7 +62,7 @@ const Navbar = () => {
       </button>
 
       {nav && (
-        <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[90vw] h-screen">
+        <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[90%] h-screen">
           <div className=" bg-white p-4 flex justify-between items-center">
             <div className="flex items-center gap-1">
               <img
@@ -74,16 +74,6 @@ const Navbar = () => {
                 Jeremiah mbinye
               </h1>
             </div>
-            {/* <div
-              onClick={() => setNav(!nav)}
-              className=" cursor-pointer  p-4 md:hidden"
-            >
-              {nav ? (
-                <IoCloseOutline size={30} />
-              ) : (
-                <HiOutlineBars3 size={30} />
-              )}
-            </div> */}
           </div>
           <ul className=" mt-8 ">
             {links.map(({ id, link, name }) => {
