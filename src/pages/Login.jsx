@@ -9,7 +9,7 @@ const Login = () => {
         className=" m-4 text-sm flex items-center gap-2  font-semibold"
         to={"/"}
       >
-        <IoIosArrowBack /> <span>Bak</span>
+        <IoIosArrowBack /> <span>Back</span>
       </Link>
       <form className=" bg-white w-[90%] mx-auto shadow-md rounded-md p-3 mt-20 ">
         <h1 className=" text-center font-semibold ">Login</h1>

@@ -16,7 +16,7 @@ const Admin = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [image, setImage] = useState("");
 
-  const [options, setOptions] = useState([]);
+  const [options, setOptions] = useState(null);
 
   const [category, setCategory] = useState("");
 
@@ -34,6 +34,8 @@ const Admin = () => {
   useEffect(() => {
     getCategories();
   }, []);
+
+  console.log(options);
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
@@ -58,12 +60,10 @@ const Admin = () => {
         saveImage.append("upload_preset", upload_preset);
 
         const res = await fetch(url, { method: "post", body: saveImage });
-
         const imageData = await res.json();
-
         imageURL = imageData.secure_url.toString();
 
-        const response = axios.post(API_URL + "photo", {
+        const response = await axios.post(API_URL + "photo", {
           url: imageURL,
           category: photoCategory,
         });
@@ -72,6 +72,9 @@ const Admin = () => {
         toast.success("Photo added");
 
         setImagePreview(null);
+        setPhoto(null);
+        setImage("");
+        setPhotoCategory("");
       }
     } catch (error) {
       toast.error(error.message);
@@ -80,6 +83,7 @@ const Admin = () => {
 
   const addCategory = async (e) => {
     e.preventDefault();
+
     if (!category) {
       return toast.info("Please enter category");
     }
@@ -87,7 +91,9 @@ const Admin = () => {
     try {
       const response = await axios.post(API_URL + "category", { category });
 
-      setOptions(response.data);
+      // setOptions(response.data);
+
+      console.log(response.data);
 
       toast.success("Category added");
     } catch (error) {
@@ -116,6 +122,8 @@ const Admin = () => {
 
       console.log(response.data);
       toast.success("Video added");
+      setVideo("");
+      setVideoCategory("");
       return response.data;
     } catch (error) {
       const message =
@@ -140,7 +148,7 @@ const Admin = () => {
         </Link>
 
         {/* Category */}
-        <form className=" my-20">
+        <form className=" mt-10 mb-20">
           <div className=" mb-4  lg:mb-7">
             <h1 className=" font-semibold text-xl lg:text-2xl">ADD CATEGORY</h1>
             <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
@@ -153,7 +161,8 @@ const Admin = () => {
               Enter category name for either videos/images
             </p>
             <input
-              className=" my-1 bg-gray-50 p-2.5 border rounded-md block w-full ]"
+              className=" my-1 bg-gray-50 p-2.5 border rounded-md block w-full "
+              value={category}
               type="text"
               name="category"
               id="category"
@@ -186,6 +195,7 @@ const Admin = () => {
               type="text"
               name="video"
               id="video"
+              value={video}
               onChange={(e) => setVideo(e.target.value)}
             />
           </div>
@@ -202,12 +212,17 @@ const Admin = () => {
             </p>
             <select
               onChange={(e) => setVideoCategory(e.target.value)}
+              value={videoCategory}
               id="category"
-              className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
+              className="bg-gray-50 my-1 capitalize  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
             >
               <option>Please choose one option</option>
-              {options.map((option, index) => {
-                return <option key={index}>{option}</option>;
+              {options?.map((option, index) => {
+                return (
+                  <option className=" capitalize" key={index}>
+                    {option?.category}
+                  </option>
+                );
               })}
             </select>
           </div>
@@ -258,7 +273,7 @@ const Admin = () => {
               )}
             </div>
 
-            <div className=" mb-4">
+            <div className=" my-4">
               <label
                 className="capitalize font-medium text-sm "
                 htmlFor="category"
@@ -270,12 +285,17 @@ const Admin = () => {
               </p>
               <select
                 onChange={(e) => setPhotoCategory(e.target.value)}
+                value={photoCategory}
                 id="category"
-                className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
+                className="bg-gray-50 my-1 capitalize  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
               >
                 <option>Please choose one option</option>
-                {options.map((option, index) => {
-                  return <option key={index}>{option}</option>;
+                {options?.map((option, index) => {
+                  return (
+                    <option className=" capitalize" key={index}>
+                      {option?.category}
+                    </option>
+                  );
                 })}
               </select>
             </div>
