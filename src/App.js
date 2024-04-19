@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Vid from "./pages/Vid";
-import Navbar from "./components/Navbar";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import { ToastContainer } from "react-toastify";
@@ -11,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <ToastContainer />
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/videography" element={<Vid />} />
