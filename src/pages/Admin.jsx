@@ -113,17 +113,10 @@ const Admin = () => {
               {imagePreview !== null ? (
                 <div>
                   <img
-                    className=" w-56 h-56  object-cover"
+                    className=" w-full h-56  object-cover"
                     src={imagePreview}
                     alt="profile"
                   />
-
-                  <button
-                    onClick={savePhoto}
-                    className=" rounded-md  bg-emerald-500 text-white w-full p-2 flex gap-1 items-center"
-                  >
-                    Upload photo
-                  </button>
                 </div>
               ) : (
                 <form className="  flex flex-col gap-3">
@@ -170,7 +163,10 @@ const Admin = () => {
               </select>
             </div>
 
-            <button className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md">
+            <button
+              onClick={savePhoto}
+              className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md"
+            >
               Add Photo
             </button>
           </div>
