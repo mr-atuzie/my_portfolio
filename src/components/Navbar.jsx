@@ -63,7 +63,7 @@ const Navbar = () => {
 
       {nav && (
         <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[90%] h-screen">
-          <div className=" bg-white p-4 flex justify-between items-center">
+          {/* <div className=" bg-white p-4 flex justify-between items-center">
             <div className="flex items-center gap-1">
               <img
                 className="w-12 h-12 rounded-full object-cover"
@@ -74,7 +74,7 @@ const Navbar = () => {
                 Jeremiah mbinye
               </h1>
             </div>
-          </div>
+          </div> */}
           <ul className=" mt-8 ">
             {links.map(({ id, link, name }) => {
               return (

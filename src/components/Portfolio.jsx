@@ -9,23 +9,6 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
-  const vidCategory = [
-    "Documentaries",
-    "Youtube content",
-    "Weddings",
-    "After-effects",
-    "short films",
-    "Reels",
-    "Product/Brade ad",
-  ];
-
-  const photoCategory = [
-    "Product shot",
-    "Model stot",
-    "Wedding shot",
-    "Drone shot",
-  ];
-
   return (
     <div name="portfolio" className=" bg-gray-50 py-10 w-full">
       <div className=" mb-5  w-[90%] lg:w-[70%] mx-auto h-full  ">
@@ -53,26 +36,11 @@ const Portfolio = () => {
                 </div>
               </Link>
             </div>
-
-            <div className=" overflow-x-scroll no-scrollbar flex gap-2 my-2 ">
-              {vidCategory.map((c, index) => {
-                return (
-                  <button
-                    key={index}
-                    className="t bg-white text-xs  border  capitalize   p-2 rounded-md  whitespace-nowrap"
-                  >
-                    {c}
-                  </button>
-                );
-              })}
-            </div>
           </div>
 
           <Swiper
             spaceBetween={10}
             slidesPerView={1.2}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             modules={[Pagination, Autoplay, A11y, Navigation]}
             pagination={{ clickable: true }}
             autoplay={{
@@ -90,24 +58,15 @@ const Portfolio = () => {
           </Swiper>
         </section>
 
-        <section className="mt-6">
-          <div>
-            <div className=" uppercase font-semibold   lg:text-2xl">
-              Photography
-            </div>
+        <section className="mt-8">
+          <div className=" flex justify-between items-center">
+            <div className=" uppercase font-semibold   lg:text-2xl">PHOTOS</div>
 
-            <div className=" overflow-x-scroll no-scrollbar flex gap-2 my-2 ">
-              {photoCategory.map((c, index) => {
-                return (
-                  <button
-                    key={index}
-                    className="t bg-white text-xs  border  capitalize   p-2 rounded-md  whitespace-nowrap"
-                  >
-                    {c}
-                  </button>
-                );
-              })}
-            </div>
+            <Link to={"/photo"}>
+              <div className=" cursor-pointer text-xs uppercase font-medium  text-gray-600">
+                see more
+              </div>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
