@@ -1,18 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IoIosArrowBack } from "react-icons/io";
 
 const Login = () => {
   return (
     <div className=" bg-gray-50 w-full h-screen ">
-      <Link className=" text-sm  font-semibold" to={"/"}>
-        Back
+      <Link
+        className=" m-4 text-sm flex items-center gap-2  font-semibold"
+        to={"/"}
+      >
+        <IoIosArrowBack /> <span>Bak</span>
       </Link>
-      <form className=" bg-white w-[85%] shadow-md rounded-md p-3 mt-20 ">
-        <h1 className=" text-center fonts ">Login</h1>
+      <form className=" bg-white w-[90%] mx-auto shadow-md rounded-md p-3 mt-20 ">
+        <h1 className=" text-center font-semibold ">Login</h1>
         <p className=" text-gray-500 text-xs text-center mb-5">
           Enter password to log into admin dashboard
         </p>
-        <h2 className=" font-semibold text-2xl mb-6">Welcome Jerry</h2>
 
         <input
           type="password"

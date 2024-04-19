@@ -1,15 +1,22 @@
 import React, { useState } from "react";
+import { IoIosArrowBack } from "react-icons/io";
 import { IoCloudUploadOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const cloud_name = process.env.REACT_APP_CLOUD_NAME;
 const upload_preset = process.env.REACT_APP_UPLOAD_PRESET;
 const url = "https://api.cloudinary.com/v1_1/domthgc9v/image/upload";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API_URL = `${BACKEND_URL}/api/v1/jerry-portfolio/`;
+
 const Admin = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [profileImage, setProfileImage] = useState("");
+
+  const [category, setCategory] = useState("");
 
   const handleImageChange = (e) => {
     setProfileImage(e.target.files[0]);
@@ -49,57 +56,65 @@ const Admin = () => {
     }
   };
 
-  console.log(profileImage);
+  const addCategory = async (e) => {
+    e.preventDefault();
+    if (!category) {
+      return toast.info("Please enter category");
+    }
+
+    try {
+      const response = axios.post(API_URL + "category", { category });
+
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      toast.error(message);
+    }
+  };
 
   return (
     <div className=" bg-gray-50  w-full">
-      <Link className=" text-sm font-semibold " to={"/"}>
-        Back
-      </Link>
       <div className="   w-[90%] lg:w-[40%] mx-auto h-full  ">
-        <form className=" mb-20">
+        <Link
+          className=" text-sm flex items-center gap-2  font-semibold"
+          to={"/"}
+        >
+          <IoIosArrowBack /> <span>Back</span>
+        </Link>
+
+        <form className=" my-20">
           <div className=" mb-4  lg:mb-7">
-            <h1 className=" font-semibold text-xl lg:text-2xl">ADD VIDEO</h1>
+            <h1 className=" font-semibold text-xl lg:text-2xl">ADD CATEGORY</h1>
             <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
           </div>
           <div className=" mb-4">
             <label className="capitalize font-medium text-sm " htmlFor="video">
-              video url
+              Category name
             </label>
-            <p className=" text-xs text-gray-500">Enter video URL here</p>
+            <p className="-mt-1 mb-1 text-xs text-gray-500">
+              Enter category name for either videos/images
+            </p>
             <input
               className=" my-1 bg-gray-50 p-2.5 border rounded-md block w-full ]"
               type="text"
-              name="video"
-              id="video"
-              // onChange={handleInputChange}
+              name="category"
+              id="category"
+              onChange={(e) => setCategory(e.target.value)}
             />
           </div>
 
-          <div className=" mb-4">
-            <label
-              className="capitalize font-medium text-sm "
-              htmlFor="category"
-            >
-              Select category
-            </label>
-            <p className=" text-xs text-gray-500">Select video category</p>
-            <select
-              // onChange={(e) => filterSizeCloth(e.target.value)}
-              id="category"
-              className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
-            >
-              <option disabled>Category</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-              <option value="2XL">XXL</option>
-            </select>
-          </div>
-
-          <button className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md">
-            Add Video
+          <button
+            onClick={addCategory}
+            className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md"
+          >
+            Add Category
           </button>
         </form>
 
@@ -172,17 +187,17 @@ const Admin = () => {
           </div>
         </section>
 
-        <form className=" mb-20">
+        <form className=" my-20">
           <div className=" mb-4  lg:mb-7">
-            <h1 className=" font-semibold text-xl lg:text-2xl">ADD CATEGORY</h1>
+            <h1 className=" font-semibold text-xl lg:text-2xl">ADD VIDEO</h1>
             <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
           </div>
           <div className=" mb-4">
             <label className="capitalize font-medium text-sm " htmlFor="video">
-              Category name
+              video url
             </label>
-            <p className=" text-xs text-gray-500">
-              Enter category name for either videos/images
+            <p className=" text-xs -mt-1 mb-1 text-gray-500">
+              Enter video URL here
             </p>
             <input
               className=" my-1 bg-gray-50 p-2.5 border rounded-md block w-full ]"
@@ -193,8 +208,34 @@ const Admin = () => {
             />
           </div>
 
+          <div className=" mb-4">
+            <label
+              className="capitalize font-medium text-sm "
+              htmlFor="category"
+            >
+              Select category
+            </label>
+            <p className=" -mt-1 mb-1 text-xs text-gray-500">
+              Select video category
+            </p>
+            <select
+              // onChange={(e) => filterSizeCloth(e.target.value)}
+              id="category"
+              className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
+            >
+              <option value={"S"} disabled>
+                Category
+              </option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="2XL">XXL</option>
+            </select>
+          </div>
+
           <button className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md">
-            Add Category
+            Add Video
           </button>
         </form>
       </div>

@@ -5,8 +5,10 @@ import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function App() {
+  axios.defaults.withCredentials = true;
   return (
     <BrowserRouter>
       <ToastContainer />
