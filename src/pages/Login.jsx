@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className=" bg-gray-50 w-full h-screen flex justify-center items-center">
-      <form className=" bg-white w-[85%] shadow-md rounded-md p-3 ">
-        <h1 className=" text-center ">Login</h1>
+    <div className=" bg-gray-50 w-full h-screen ">
+      <Link className=" text-sm " to={"/"}>
+        Back
+      </Link>
+      <form className=" bg-white w-[85%] shadow-md rounded-md p-3 mt-20 ">
+        <h1 className=" text-center fonts ">Login</h1>
         <p className=" text-gray-500 text-xs text-center mb-5">
           Enter password to log into admin dashboard
         </p>
