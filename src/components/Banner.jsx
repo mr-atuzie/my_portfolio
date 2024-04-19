@@ -73,7 +73,7 @@ const Banner = () => {
           </a>
         </div>
       </div>
-      <p className=" text-center w-[90%] mx-auto text-sm leading-4  lg:px-4 lg:max-w-2xl lg:text-center ">
+      <p className=" text-center w-[90%] mx-auto text-sm leading-6 mb-4  lg:px-4 lg:max-w-2xl lg:text-center ">
         Step into the realm of visual storytelling, where every frame holds the
         power to captivate, evoke emotions, and transport viewers to realms
         beyond imagination. Meet the maestro behind the lens, the architect of
