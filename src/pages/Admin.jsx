@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoCloudUploadOutline } from "react-icons/io5";
 
 const Admin = () => {
   const [imagePreview, setImagePreview] = useState(null);
@@ -12,8 +13,8 @@ const Admin = () => {
   console.log(profileImage);
 
   return (
-    <div className="  w-full">
-      <div className=" mb-5  w-[90%] lg:w-[40%] mx-auto h-full  ">
+    <div className=" bg-gray-50  w-full">
+      <div className="   w-[90%] lg:w-[40%] mx-auto h-full  mb-40 ">
         <form>
           <h1 className=" font-semibold text-lg mb-3 tracking-wide">
             ADD VIDEO
@@ -60,42 +61,46 @@ const Admin = () => {
           </h1>
           <div>
             <div>
-              {imagePreview !== null && (
-                <img
-                  className=" w-56 h-56  object-cover"
-                  src={imagePreview}
-                  alt="profile"
-                />
-              )}
+              {imagePreview !== null ? (
+                <div>
+                  <img
+                    className=" w-56 h-56  object-cover"
+                    src={imagePreview}
+                    alt="profile"
+                  />
 
-              {imagePreview !== null && (
-                <button
-                  // onClick={savePhoto}
-                  className=" rounded-md  bg-black text-white w-full p-2 flex gap-1 items-center"
-                >
-                  Upload photo
-                </button>
+                  <button
+                    // onClick={savePhoto}
+                    className=" rounded-md  bg-black text-white w-full p-2 flex gap-1 items-center"
+                  >
+                    Upload photo
+                  </button>
+                </div>
+              ) : (
+                <form className="  flex flex-col gap-3">
+                  <div>
+                    <label
+                      className=" w-full flex justify-center items-center gap-1 h-56 border-dotted border-2 text-gray-500 rounded-md  bg-slate-300 object-cover"
+                      htmlFor="image"
+                    >
+                      <span>
+                        <IoCloudUploadOutline />
+                      </span>
+                      <span className=" text-sm"> Upload Pic</span>
+                    </label>
+                    <input
+                      className=" hidden p-2.5 rounded-xl  w-full lg:w-[350px]"
+                      type="file"
+                      // accept="image/"
+                      name="image"
+                      id="image"
+                      onChange={handleImageChange}
+                    />
+                  </div>
+                </form>
               )}
             </div>
           </div>
-          <form className="  flex flex-col gap-3">
-            <div>
-              <label
-                className=" w-56 h-56 text-gray-500 rounded-md  bg-slate-300 flex justify-center items-center object-cover"
-                htmlFor="image"
-              >
-                Upload Pic
-              </label>
-              <input
-                className=" hidden p-2.5 rounded-xl  w-full lg:w-[350px]"
-                type="file"
-                accept="image/"
-                name="image"
-                id="image"
-                onChange={handleImageChange}
-              />
-            </div>
-          </form>
         </section>
       </div>
     </div>
