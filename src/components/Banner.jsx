@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroImg from "../assets/jerry.png";
-import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -59,7 +58,7 @@ const Banner = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaXTwitter size={20} />
+            <FaTwitter size={20} />
           </a>
         </div>
 
