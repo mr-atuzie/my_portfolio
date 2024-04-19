@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCloudUploadOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -14,12 +14,30 @@ const API_URL = `${BACKEND_URL}/api/v1/jerry-portfolio/`;
 
 const Admin = () => {
   const [imagePreview, setImagePreview] = useState(null);
-  const [profileImage, setProfileImage] = useState("");
+  const [image, setImage] = useState("");
+
+  const [options, setOptions] = useState([]);
 
   const [category, setCategory] = useState("");
 
+  const [video, setVideo] = useState("");
+  const [videoCategory, setVideoCategory] = useState("");
+
+  const [photo, setPhoto] = useState("");
+  const [photoCategory, setPhotoCategory] = useState("");
+
+  const getCategories = async () => {
+    const res = await axios.get(API_URL + "category");
+    setOptions(res.data);
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
   const handleImageChange = (e) => {
-    setProfileImage(e.target.files[0]);
+    setImage(e.target.files[0]);
+    setPhoto(e.target.files[0]);
     setImagePreview(URL.createObjectURL(e.target.files[0]));
   };
 
@@ -30,11 +48,12 @@ const Admin = () => {
 
     try {
       if (
-        profileImage !== null &&
-        (profileImage.type === "image/jpeg" || "image/jpg" || "image/png")
+        image !== null &&
+        (image.type === "image/jpeg" || "image/jpg" || "image/png") &&
+        !photo
       ) {
         const saveImage = new FormData();
-        saveImage.append("file", profileImage);
+        saveImage.append("file", image);
         saveImage.append("cloud_name", cloud_name);
         saveImage.append("upload_preset", upload_preset);
 
@@ -44,12 +63,15 @@ const Admin = () => {
 
         imageURL = imageData.secure_url.toString();
 
-        // const userData = {
-        //   photo: profileImage ? imageURL : profile.photo,
-        // };
+        const response = axios.post(API_URL + "photo", {
+          url: imageURL,
+          category: photoCategory,
+        });
+
+        console.log(response.data);
+        toast.success("Photo added");
 
         setImagePreview(null);
-        console.log(imageURL);
       }
     } catch (error) {
       toast.error(error.message);
@@ -63,9 +85,37 @@ const Admin = () => {
     }
 
     try {
-      const response = axios.post(API_URL + "category", { category });
+      const response = await axios.post(API_URL + "category", { category });
+
+      setOptions(response.data);
+
+      toast.success("Category added");
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      toast.error(message);
+    }
+  };
+
+  const addVideo = async (e) => {
+    e.preventDefault();
+    if (!video || !videoCategory) {
+      return toast.info("Please enter required fields");
+    }
+
+    try {
+      const response = axios.post(API_URL + "video", {
+        url: video,
+        category: videoCategory,
+      });
 
       console.log(response.data);
+      toast.success("Video added");
       return response.data;
     } catch (error) {
       const message =
@@ -89,6 +139,7 @@ const Admin = () => {
           <IoIosArrowBack /> <span>Back</span>
         </Link>
 
+        {/* Category */}
         <form className=" my-20">
           <div className=" mb-4  lg:mb-7">
             <h1 className=" font-semibold text-xl lg:text-2xl">ADD CATEGORY</h1>
@@ -115,6 +166,57 @@ const Admin = () => {
             className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md"
           >
             Add Category
+          </button>
+        </form>
+
+        <form className=" my-20">
+          <div className=" mb-4  lg:mb-7">
+            <h1 className=" font-semibold text-xl lg:text-2xl">ADD VIDEO</h1>
+            <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
+          </div>
+          <div className=" mb-4">
+            <label className="capitalize font-medium text-sm " htmlFor="video">
+              video url
+            </label>
+            <p className=" text-xs -mt-1 mb-1 text-gray-500">
+              Enter video URL here
+            </p>
+            <input
+              className=" my-1 bg-gray-50 p-2.5 border rounded-md block w-full ]"
+              type="text"
+              name="video"
+              id="video"
+              onChange={(e) => setVideo(e.target.value)}
+            />
+          </div>
+
+          <div className=" mb-4">
+            <label
+              className="capitalize font-medium text-sm "
+              htmlFor="category"
+            >
+              Select category
+            </label>
+            <p className=" -mt-1 mb-1 text-xs text-gray-500">
+              Select video category
+            </p>
+            <select
+              onChange={(e) => setVideoCategory(e.target.value)}
+              id="category"
+              className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
+            >
+              <option>Please choose one option</option>
+              {options.map((option, index) => {
+                return <option key={index}>{option}</option>;
+              })}
+            </select>
+          </div>
+
+          <button
+            onClick={addVideo}
+            className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md"
+          >
+            Add Video
           </button>
         </form>
 
@@ -147,7 +249,7 @@ const Admin = () => {
                   <input
                     className=" hidden p-2.5 rounded-xl  w-full lg:w-[350px]"
                     type="file"
-                    // accept="image/"
+                    accept="image/"
                     name="image"
                     id="image"
                     onChange={handleImageChange}
@@ -163,18 +265,18 @@ const Admin = () => {
               >
                 Select category
               </label>
-              <p className=" text-xs text-gray-500">Select photo category</p>
+              <p className=" -mt-1 mb-1 text-xs text-gray-500">
+                Select photo category
+              </p>
               <select
-                // onChange={(e) => filterSizeCloth(e.target.value)}
+                onChange={(e) => setPhotoCategory(e.target.value)}
                 id="category"
                 className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
               >
-                <option disabled>Category</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="2XL">XXL</option>
+                <option>Please choose one option</option>
+                {options.map((option, index) => {
+                  return <option key={index}>{option}</option>;
+                })}
               </select>
             </div>
 
@@ -186,58 +288,6 @@ const Admin = () => {
             </button>
           </div>
         </section>
-
-        <form className=" my-20">
-          <div className=" mb-4  lg:mb-7">
-            <h1 className=" font-semibold text-xl lg:text-2xl">ADD VIDEO</h1>
-            <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
-          </div>
-          <div className=" mb-4">
-            <label className="capitalize font-medium text-sm " htmlFor="video">
-              video url
-            </label>
-            <p className=" text-xs -mt-1 mb-1 text-gray-500">
-              Enter video URL here
-            </p>
-            <input
-              className=" my-1 bg-gray-50 p-2.5 border rounded-md block w-full ]"
-              type="text"
-              name="video"
-              id="video"
-              // onChange={handleInputChange}
-            />
-          </div>
-
-          <div className=" mb-4">
-            <label
-              className="capitalize font-medium text-sm "
-              htmlFor="category"
-            >
-              Select category
-            </label>
-            <p className=" -mt-1 mb-1 text-xs text-gray-500">
-              Select video category
-            </p>
-            <select
-              // onChange={(e) => filterSizeCloth(e.target.value)}
-              id="category"
-              className="bg-gray-50 my-1  p-3 w-full border italic text-sm md:text-base border-gray-300  text-gray-900 rounded-md  "
-            >
-              <option value={"S"} disabled>
-                Category
-              </option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-              <option value="2XL">XXL</option>
-            </select>
-          </div>
-
-          <button className=" bg-black text-white font-medium w-full px-4 py-2 rounded-md">
-            Add Video
-          </button>
-        </form>
       </div>
     </div>
   );
