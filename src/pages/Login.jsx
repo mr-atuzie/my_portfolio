@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className=" bg-gray-50 w-full h-screen ">
-      <Link className=" text-sm " to={"/"}>
+      <Link className=" text-sm  font-semibold" to={"/"}>
         Back
       </Link>
       <form className=" bg-white w-[85%] shadow-md rounded-md p-3 mt-20 ">
@@ -21,7 +21,7 @@ const Login = () => {
         />
 
         <Link to={"/admin"}>
-          <button className=" text-white font-medium w-full mt-8 p-2.5 bg-black text-sm">
+          <button className=" rounded-md text-white font-medium w-full mt-8 p-2.5 bg-black text-sm">
             Login
           </button>
         </Link>
