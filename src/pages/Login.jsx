@@ -5,13 +5,13 @@ import { IoIosArrowBack } from "react-icons/io";
 const Login = () => {
   return (
     <div className=" bg-gray-50 w-full h-screen ">
-      <Link
-        className=" m-4 text-sm flex items-center gap-2  font-semibold"
-        to={"/"}
-      >
-        <IoIosArrowBack /> <span>Back</span>
-      </Link>
-      <form className=" bg-white w-[90%] mx-auto shadow-md rounded-md p-3 mt-20 ">
+      <form className=" bg-white w-[90%] mx-auto shadow-md rounded-md p-3  ">
+        <Link
+          className=" mt-4 text-sm flex items-center gap-2 mb-40  font-semibold"
+          to={"/"}
+        >
+          <IoIosArrowBack /> <span>Back</span>
+        </Link>
         <h1 className=" text-center font-semibold ">Login</h1>
         <p className=" text-gray-500 text-xs text-center mb-5">
           Enter password to log into admin dashboard

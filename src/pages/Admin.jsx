@@ -35,8 +35,6 @@ const Admin = () => {
     getCategories();
   }, []);
 
-  console.log(options);
-
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
     setPhoto(e.target.files[0]);
@@ -48,11 +46,12 @@ const Admin = () => {
 
     let imageURL;
 
+    console.log({ photo, photoCategory });
+
     try {
       if (
         image !== null &&
-        (image.type === "image/jpeg" || "image/jpg" || "image/png") &&
-        !photo
+        (image.type === "image/jpeg" || "image/jpg" || "image/png")
       ) {
         const saveImage = new FormData();
         saveImage.append("file", image);
@@ -75,9 +74,11 @@ const Admin = () => {
         setPhoto(null);
         setImage("");
         setPhotoCategory("");
+      } else {
+        toast.info("Please enter all required fields");
       }
     } catch (error) {
-      toast.error(error.message);
+      return toast.error(error.message);
     }
   };
 
@@ -141,7 +142,7 @@ const Admin = () => {
     <div className=" bg-gray-50  w-full">
       <div className="   w-[90%] lg:w-[40%] mx-auto h-full  ">
         <Link
-          className=" text-sm flex items-center gap-2  font-semibold"
+          className=" mt-4 text-sm flex items-center gap-2  font-semibold"
           to={"/"}
         >
           <IoIosArrowBack /> <span>Back</span>
