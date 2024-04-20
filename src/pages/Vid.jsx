@@ -26,6 +26,8 @@ const Vid = () => {
     getVideos();
   }, []);
 
+  console.log(options);
+
   const handleFilter = (cat) => {
     let filteredVid = videos?.filter((option) => option.category === cat);
 

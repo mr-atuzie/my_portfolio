@@ -9,13 +9,16 @@ const API_URL = `${BACKEND_URL}/api/v1/users/`;
 
 const Login = () => {
   const [password, setPasword] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const login = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!password) {
-      return toast.info("Please enter category");
+      setLoading(false);
+      return toast.info("Please enter password");
     }
 
     try {
@@ -23,6 +26,7 @@ const Login = () => {
 
       toast.success("Welcome onboard, Mr Jerry");
       setPasword("");
+      setLoading(false);
       navigate("/admin");
     } catch (error) {
       const message =
@@ -31,6 +35,8 @@ const Login = () => {
           error.response.data.message) ||
         error.message ||
         error.toString();
+
+      setLoading(false);
 
       toast.error(message);
     }
@@ -59,10 +65,11 @@ const Login = () => {
           />
 
           <button
+            disabled={loading}
             onClick={login}
             className=" rounded-md text-white font-medium w-full mt-8 p-2.5 bg-black text-sm"
           >
-            Login
+            {loading ? "Loading" : "Log in"}
           </button>
         </form>
       </div>
