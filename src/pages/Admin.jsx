@@ -140,9 +140,9 @@ const Admin = () => {
 
   return (
     <div className=" bg-gray-50  w-full">
-      <div className="   w-[90%] lg:w-[40%] mx-auto h-full  ">
+      <div className=" py-5   w-[90%] lg:w-[40%] mx-auto h-full  ">
         <Link
-          className=" mt-4 text-sm flex items-center gap-2  font-semibold"
+          className="  text-sm flex items-center gap-2  font-semibold"
           to={"/"}
         >
           <IoIosArrowBack /> <span>Back</span>
@@ -152,7 +152,7 @@ const Admin = () => {
         <form className=" mt-10 mb-20">
           <div className=" mb-4  lg:mb-7">
             <h1 className=" font-semibold text-xl lg:text-2xl">ADD CATEGORY</h1>
-            <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
+            <div className="w-[70px] rounded-lg h-[4px] bg-emerald-500"></div>
           </div>
           <div className=" mb-4">
             <label className="capitalize font-medium text-sm " htmlFor="video">
@@ -182,7 +182,7 @@ const Admin = () => {
         <form className=" my-20">
           <div className=" mb-4  lg:mb-7">
             <h1 className=" font-semibold text-xl lg:text-2xl">ADD VIDEO</h1>
-            <div className="w-[70px] rounded-lg h-[4px] bg-orange-500"></div>
+            <div className="w-[70px] rounded-lg h-[4px] bg-purple-500"></div>
           </div>
           <div className=" mb-4">
             <label className="capitalize font-medium text-sm " htmlFor="video">

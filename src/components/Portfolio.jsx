@@ -50,8 +50,8 @@ const Portfolio = () => {
           >
             {vid.map(({ id, img }) => {
               return (
-                <SwiperSlide>
-                  <PortfolioCard key={id} img={img} />
+                <SwiperSlide key={id}>
+                  <PortfolioCard img={img} />
                 </SwiperSlide>
               );
             })}
@@ -62,7 +62,7 @@ const Portfolio = () => {
           <div className=" flex justify-between items-center">
             <div className=" uppercase font-semibold   lg:text-2xl">PHOTOS</div>
 
-            <Link to={"/photo"}>
+            <Link to={"/photography"}>
               <div className=" cursor-pointer text-xs uppercase font-medium  text-gray-600">
                 see more
               </div>

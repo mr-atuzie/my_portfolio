@@ -75,22 +75,14 @@ const Navbar = () => {
               </h1>
             </div>
           </div> */}
-          <ul className=" mt-8 ">
+          <ul className=" mt-16 ">
             {links.map(({ id, link, name }) => {
               return (
                 <li
                   key={id}
-                  className=" px-4 cursor-pointer capitalize  mb-4  hover:scale-105 duration-200"
+                  className=" px-4 text-sm font-medium cursor-pointer capitalize  mb-4  hover:scale-105 duration-200"
                 >
-                  <Link
-                    onClick={() => setNav(false)}
-                    activeClass="active"
-                    to={link}
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                  >
+                  <Link onClick={() => setNav(false)} to={link}>
                     {name}
                   </Link>
                 </li>
