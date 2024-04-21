@@ -67,7 +67,7 @@ const Login = () => {
           <button
             disabled={loading}
             onClick={login}
-            className=" rounded-md text-white font-medium w-full mt-8 p-2.5 bg-black text-sm"
+            className=" rounded-md text-white font-medium w-full mt-8 p-2.5 bg-black disabled:bg-opacity-60 text-sm"
           >
             {loading ? "Loading" : "Log in"}
           </button>
