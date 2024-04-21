@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
+// import { NavLink } from "react-router-dom";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API_URL = `${BACKEND_URL}/api/v1/jerry-portfolio/`;
@@ -9,7 +10,8 @@ const Vid = () => {
   const [options, setOptions] = useState(null);
 
   const [videos, setVideos] = useState([]);
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("");
+  const [empty, setEmpty] = useState(false);
 
   const getCategories = async () => {
     const res = await axios.get(API_URL + "category");
@@ -19,6 +21,7 @@ const Vid = () => {
   const getVideos = async () => {
     const res = await axios.get(API_URL + "video");
     setVideos(res.data);
+    setActive("");
   };
 
   useEffect(() => {
@@ -26,18 +29,34 @@ const Vid = () => {
     getVideos();
   }, []);
 
-  console.log(options);
-
-  const handleFilter = (cat) => {
-    let filteredVid = videos?.filter((option) => option.category === cat);
-
-    if (cat === "All") {
+  const handleFilter = async (cat) => {
+    setEmpty(false);
+    if (cat === "") {
       getVideos();
-      setActive("All");
     } else {
-      setVideos(filteredVid);
-      setActive(cat);
+      const res = await axios.post(API_URL + "filter-vid", { category: cat });
+      setVideos(res.data);
+      if (res.data.length <= 0) {
+        setEmpty(true);
+      }
     }
+
+    setActive(cat);
+
+    // let filteredVid = videos?.filter((option) => option.category === cat);
+    // setVideos(filteredVid);
+
+    // if (cat === "") {
+    //   getVideos();
+    //   setActive("");
+    //   console.log({ cat });
+    // } else {
+    //   setActive(cat);
+    //   setVideos(filteredVid);
+    // console.log(cat);
+    // }
+
+    // console.log(filteredVid);
   };
 
   return (
@@ -58,9 +77,9 @@ const Vid = () => {
           <div className=" overflow-x-scroll mb-4 no-scrollbar flex gap-3 my-2 ">
             <button
               className={`${
-                active === "All" ? " bg-black text-white" : "bg-gray-100"
+                active === "" ? " bg-black text-white" : "bg-gray-100"
               }  border  capitalize   p-2 rounded-md text text-sm whitespace-nowrap`}
-              onClick={() => handleFilter("All")}
+              onClick={() => handleFilter("")}
             >
               All
             </button>
@@ -80,15 +99,16 @@ const Vid = () => {
               );
             })}
           </div>
-          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 my-3">
-            {videos?.length < 0 ? (
-              <p className=" text-sm text-gray-600 ">Nothing found</p>
-            ) : (
-              videos?.map(({ _id, url }) => {
+          {videos?.length > 0 && (
+            <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 my-3">
+              {videos?.map(({ _id, url }) => {
                 return <PortfolioCard key={_id} img={url} />;
-              })
-            )}
-          </div>
+              })}
+            </div>
+          )}
+          {empty && videos.length <= 0 && (
+            <p className=" text-sm text-gray-500">Nothing found</p>
+          )}
         </div>
       </div>
     </div>

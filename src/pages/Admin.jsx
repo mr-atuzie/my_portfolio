@@ -4,6 +4,7 @@ import { IoCloudUploadOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 const cloud_name = process.env.REACT_APP_CLOUD_NAME;
 const upload_preset = process.env.REACT_APP_UPLOAD_PRESET;
@@ -17,6 +18,8 @@ const Admin = () => {
   const [image, setImage] = useState("");
 
   const [options, setOptions] = useState(null);
+
+  const [loading, setLoading] = useState(false);
 
   const [category, setCategory] = useState("");
 
@@ -46,7 +49,7 @@ const Admin = () => {
 
     let imageURL;
 
-    console.log({ photo, photoCategory });
+    setLoading(true);
 
     try {
       if (
@@ -68,24 +71,30 @@ const Admin = () => {
         });
 
         console.log(response.data);
+        console.log(photo);
         toast.success("Photo added");
 
         setImagePreview(null);
         setPhoto(null);
         setImage("");
         setPhotoCategory("");
+        setLoading(false);
       } else {
         toast.info("Please enter all required fields");
+        setLoading(false);
       }
     } catch (error) {
+      setLoading(false);
       return toast.error(error.message);
     }
   };
 
   const addCategory = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!category) {
+      setLoading(false);
       return toast.info("Please enter category");
     }
 
@@ -95,7 +104,7 @@ const Admin = () => {
       // setOptions(response.data);
 
       console.log(response.data);
-
+      setLoading(false);
       toast.success("Category added");
     } catch (error) {
       const message =
@@ -104,13 +113,14 @@ const Admin = () => {
           error.response.data.message) ||
         error.message ||
         error.toString();
-
+      setLoading(false);
       toast.error(message);
     }
   };
 
   const addVideo = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (!video || !videoCategory) {
       return toast.info("Please enter required fields");
     }
@@ -125,6 +135,7 @@ const Admin = () => {
       toast.success("Video added");
       setVideo("");
       setVideoCategory("");
+      setLoading(false);
       return response.data;
     } catch (error) {
       const message =
@@ -133,6 +144,7 @@ const Admin = () => {
           error.response.data.message) ||
         error.message ||
         error.toString();
+      setLoading(false);
 
       toast.error(message);
     }
@@ -140,6 +152,7 @@ const Admin = () => {
 
   return (
     <div className=" bg-gray-50  w-full">
+      {loading && <Loader />}
       <div className=" py-5   w-[90%] lg:w-[40%] mx-auto h-full  ">
         <Link
           className="  text-sm flex items-center gap-2  font-semibold"

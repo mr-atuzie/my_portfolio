@@ -10,6 +10,7 @@ const Photos = () => {
 
   const [photos, setPhotos] = useState([]);
   const [active, setActive] = useState("All");
+  const [empty, setEmpty] = useState(false);
 
   const getCategories = async () => {
     const res = await axios.get(API_URL + "category");
@@ -26,16 +27,19 @@ const Photos = () => {
     getPhotos();
   }, []);
 
-  const handleFilter = (cat) => {
-    let filteredVid = photos?.filter((option) => option.category === cat);
-
-    if (cat === "All") {
+  const handleFilter = async (cat) => {
+    setEmpty(false);
+    if (cat === "") {
       getPhotos();
-      setActive("All");
     } else {
-      setPhotos(filteredVid);
-      setActive(cat);
+      const res = await axios.post(API_URL + "filter-photo", { category: cat });
+      setPhotos(res.data);
+      if (res.data.length <= 0) {
+        setEmpty(true);
+      }
     }
+
+    setActive(cat);
   };
   return (
     <div className="  w-full">
@@ -75,15 +79,17 @@ const Photos = () => {
               );
             })}
           </div>
-          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 my-3">
-            {photos?.length < 0 ? (
-              <p className=" text-sm text-gray-600 ">Nothing found</p>
-            ) : (
-              photos?.map(({ _id, url }) => {
+          {photos?.length > 0 && (
+            <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 my-3">
+              {photos?.map(({ _id, url }) => {
                 return <PortfolioCard key={_id} img={url} />;
-              })
-            )}
-          </div>
+              })}
+            </div>
+          )}
+
+          {empty && photos.length <= 0 && (
+            <p className=" text-sm text-gray-500">Nothing found</p>
+          )}
         </div>
       </div>
     </div>
