@@ -1,6 +1,4 @@
 import React from "react";
-// import { BsLink45Deg } from "react-icons/bs";
-import { photo, vid } from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, A11y, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -8,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
-const Portfolio = () => {
+const Portfolio = ({ photos, videos }) => {
   return (
     <div name="portfolio" className=" bg-gray-50 py-10 w-full">
       <div className=" mb-5  w-[90%] lg:w-[70%] mx-auto h-full  ">
@@ -48,10 +46,10 @@ const Portfolio = () => {
               disableOnInteraction: false,
             }}
           >
-            {vid.map(({ id, img }) => {
+            {videos?.map(({ _id, url }) => {
               return (
-                <SwiperSlide key={id}>
-                  <PortfolioCard img={img} />
+                <SwiperSlide key={_id}>
+                  <PortfolioCard img={url} />
                 </SwiperSlide>
               );
             })}
@@ -70,8 +68,8 @@ const Portfolio = () => {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
-            {photo.map(({ id, img }) => {
-              return <PhotoCard key={id} img={img} />;
+            {photos.map(({ _id, url }) => {
+              return <PhotoCard key={_id} img={url} />;
             })}
           </div>
         </section>

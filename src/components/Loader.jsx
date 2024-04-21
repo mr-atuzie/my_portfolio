@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 
 const Loader = () => {
   return ReactDOM.createPortal(
-    <div className=" w-full h-screen bg-black/90 fixed top-0 z-50 flex justify-center items-center">
+    <div className=" w-full h-screen bg-black/50 fixed top-0 z-50 flex justify-center items-center">
       <div>
         <div role="status">
           <svg
             aria-hidden="true"
-            className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-yellow-600"
+            className="inline w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-yellow-600"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

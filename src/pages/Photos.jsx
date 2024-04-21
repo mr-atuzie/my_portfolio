@@ -9,7 +9,7 @@ const Photos = () => {
   const [options, setOptions] = useState(null);
 
   const [photos, setPhotos] = useState([]);
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("");
   const [empty, setEmpty] = useState(false);
 
   const getCategories = async () => {
@@ -19,6 +19,7 @@ const Photos = () => {
 
   const getPhotos = async () => {
     const res = await axios.get(API_URL + "photo");
+    setActive("");
     setPhotos(res.data);
   };
 
@@ -57,9 +58,9 @@ const Photos = () => {
           <div className=" overflow-x-scroll mb-4 no-scrollbar flex gap-3 my-2 ">
             <button
               className={`${
-                active === "All" ? " bg-black text-white" : "bg-gray-100"
+                active === "" ? " bg-black text-white" : "bg-gray-100"
               }  border  capitalize   p-2 rounded-md text text-sm whitespace-nowrap`}
-              onClick={() => handleFilter("All")}
+              onClick={() => handleFilter("")}
             >
               All
             </button>
