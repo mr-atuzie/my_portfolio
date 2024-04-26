@@ -106,6 +106,7 @@ const Admin = () => {
       console.log(response.data);
       setLoading(false);
       toast.success("Category added");
+      setCategory("");
     } catch (error) {
       const message =
         (error.response &&
@@ -121,12 +122,13 @@ const Admin = () => {
   const addVideo = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     if (!video || !videoCategory) {
       return toast.info("Please enter required fields");
     }
 
     try {
-      const response = axios.post(API_URL + "video", {
+      const response = await axios.post(API_URL + "video", {
         url: video,
         category: videoCategory,
       });

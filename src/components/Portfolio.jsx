@@ -23,7 +23,7 @@ const Portfolio = ({ photos, videos }) => {
 
         <section>
           <div>
-            <div className=" flex justify-between items-center">
+            <div className=" flex justify-between items-center mb-2">
               <div className=" uppercase font-semibold   lg:text-2xl">
                 Videography
               </div>
@@ -57,7 +57,7 @@ const Portfolio = ({ photos, videos }) => {
         </section>
 
         <section className="mt-8">
-          <div className=" flex justify-between items-center">
+          <div className=" flex justify-between items-center mb-2">
             <div className=" uppercase font-semibold   lg:text-2xl">PHOTOS</div>
 
             <Link to={"/photography"}>

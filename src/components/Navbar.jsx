@@ -12,7 +12,7 @@ const Navbar = () => {
     { id: 1, link: "/", name: "home" },
     { id: 6, link: "/videography", name: "videography" },
     { id: 7, link: "/photography", name: "photography" },
-    { id: 2, link: "/login", name: "Admin" },
+    // { id: 2, link: "/login", name: "Admin" },
   ];
 
   return (
@@ -63,18 +63,6 @@ const Navbar = () => {
 
       {nav && (
         <div className=" z-30 duration-300 flex flex-col fixed  shadow-md bg-gray-50 top-0 right-0  w-[90%] h-screen">
-          {/* <div className=" bg-white p-4 flex justify-between items-center">
-            <div className="flex items-center gap-1">
-              <img
-                className="w-12 h-12 rounded-full object-cover"
-                src={logo}
-                alt=""
-              />
-              <h1 className=" uppercase  text-sm lg:text-5xl font-semibold ">
-                Jeremiah mbinye
-              </h1>
-            </div>
-          </div> */}
           <ul className=" mt-16 ">
             {links.map(({ id, link, name }) => {
               return (
@@ -96,6 +84,11 @@ const Navbar = () => {
           >
             Download Resume
           </a>
+          <Link className="px-5" to={"/login"}>
+            <button className=" mt-72 absolute -bottom-5  rounded-full w-full text-center  bg-red-500 text-white px-4 py-3 capitalize hover:bg-white hover:text-red-600 hover:border-2 hover:border-red-500 ">
+              Admin Only
+            </button>
+          </Link>
         </div>
       )}
     </motion.nav>
