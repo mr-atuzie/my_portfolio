@@ -96,10 +96,8 @@ const PortfolioCard = ({ img }) => {
 
 const PhotoCard = ({ img }) => {
   return (
-    <div id="projects" className=" border  5">
-      <div className=" bg-white pb-8  ">
-        <img src={img} className="w-full h-[205px] object-cover" alt="" />
-      </div>
+    <div id="projects" className=" border-2  bg-gray-200 rounded-sm ">
+      <img src={img} className="w-full h-[205px] object-cover" alt="" />
     </div>
   );
 };

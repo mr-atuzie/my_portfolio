@@ -84,8 +84,8 @@ const Navbar = () => {
           >
             Download Resume
           </a>
-          <Link className="px-5" to={"/login"}>
-            <button className=" mt-72 absolute -bottom-5  rounded-full w-full text-center  bg-red-500 text-white px-4 py-3 capitalize hover:bg-white hover:text-red-600 hover:border-2 hover:border-red-500 ">
+          <Link className="px-5 mt-60" to={"/login"}>
+            <button className="  rounded-full w-full text-center  bg-red-500 text-white px-4 py-3 capitalize hover:bg-white hover:text-red-600 hover:border-2 hover:border-red-500 ">
               Admin Only
             </button>
           </Link>
